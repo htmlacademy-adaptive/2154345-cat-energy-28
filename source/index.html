@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="page-intro">
@@ -34,10 +35,10 @@
       </section>
     </div>
 
-    <main class="main-container">
+    <main class="page-container">
       <section class="options">
         <h2 class="visually-hidden">Возможные программы питания вашего кота.</h2>
-        <ul class="options-list">
+        <ul class="options__options-list options-list">
           <li class="options-list__item">
             <h3 class="options-list__title">Похудение</h3>
             <p class="options-list__desc">
@@ -81,7 +82,7 @@
           Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не
           менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
-        <dl class="example">
+        <dl class="example__list">
           <div class="example__feature">
             <dt class="example__number">5 кг</dt>
             <dd class="example__title">снижение веса</dd>
@@ -92,10 +93,10 @@
           </div>
         </dl>
         <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
-        <div class="example__slider cat-slider">
-          <img class="cat-slider__photo" src="img/example/fat-kitty.png" alt="Большой кот">
-          <img class="cat-slider__photo" src="img/example/slim-kitty.png" alt="Стройный кот">
-          <input class="cat-slider__range" type="range">
+        <div class="example__slider slider">
+          <img class="slider__photo" src="img/example/fat-kitty.png" alt="Большой кот">
+          <img class="slider__photo" src="img/example/slim-kitty.png" alt="Стройный кот">
+          <input class="slider__range" type="range">
         </div>
       </section>
       <section class="address">
@@ -137,9 +138,9 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/">
-        <span class="copyright__text">HTML Academy</span>
-        <img class="copyright__logo" src="img/footer/copyright-logo.svg" alt="">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+        <span class="page-footer__copyright-text">HTML Academy</span>
+        <img class="page-footer__copyright-logo" src="img/footer/copyright-logo.svg" alt="">
       </a>
     </footer>
   </body>

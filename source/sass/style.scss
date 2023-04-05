@@ -1,1 +1,74 @@
-// Начните писать стили здесь
+@use "blocks/page-header.scss";
+
+@use "blocks/navigation.scss";
+
+@use "blocks/page-intro.scss";
+
+@use "blocks/hero.scss";
+
+@use "blocks/page-container.scss";
+
+@use "blocks/options.scss";
+
+@use "blocks/options-list.scss";
+
+@use "blocks/benefits.scss";
+
+@use "blocks/benefits-list.scss";
+
+@use "blocks/example.scss";
+
+@use "blocks/slider.scss";
+
+@use "blocks/form-container.scss";
+
+@use "blocks/form.scss";
+
+@use "blocks/controls-list.scss";
+
+@use "blocks/products.scss";
+
+@use "blocks/card.scss";
+
+@use "blocks/features-list.scss";
+
+@use "blocks/additionals.scss";
+
+@use "blocks/additive.scss";
+
+@use "blocks/feature-container.scss";
+
+@use "blocks/address.scss";
+
+@use "blocks/page-footer.scss";
+
+@use "blocks/social-list.scss";
+
+@use "blocks/button.scss";
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Oswald", "Open Sans", sans-serif;
+}
+
+$mainBgColor: #ffffff;
+$accentBGColor: #f2f2f2;
+$contrastColor: #68b738;
+$mainTextColor: #000000;
+$opstTextColor: #ffffff;
+$altTextColor: #444444;

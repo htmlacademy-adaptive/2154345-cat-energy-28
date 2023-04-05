@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -30,8 +31,8 @@
     <main class="page-container">
       <section class="products">
         <h1 class="products__title">Каталог продукции</h1>
-        <ul class="products__catalog-list catalog-list">
-          <li class="catalog-list__item card">
+        <ul class="products__catalog-list">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/chicken-500--phone.png" alt="">
               <h2 class="card__title">Cat Energy PRO 500 г</h2>
@@ -52,7 +53,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/chicken-1000--phone.png" alt="">
               <h2 class="card__title">Cat Energy PRO 1000 г</h2>
@@ -73,7 +74,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/fish-500--phone.png" alt="">
               <h2 class="card__title">Cat Energy PRO 500 г</h2>
@@ -94,7 +95,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/fish-1000--phone.png" alt="">
               <h2 class="card__title">Cat Energy PRO 1000 г</h2>
@@ -115,7 +116,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/buckwheat-500--phone.png" alt="">
               <h2 class="card__title">Cat Energy slim 500 г</h2>
@@ -136,7 +137,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/buckwheat-1000--phone.png" alt="">
               <h2 class="card__title">Cat Energy slim 1000 г</h2>
@@ -157,7 +158,7 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/rice-500--phone.png" alt="">
               <h2 class="card__title">Cat Energy slim 500 г</h2>
@@ -178,10 +179,10 @@
             </dl>
             <a class="card__order-button button">Заказать</a>
           </li>
-          <li class="catalog-list__item card">
+          <li class="products__item card">
             <h2 class="card__title">Показать еще 100500 товаров</h2>
             <p class="card__slogan">На самом деле вкусов гораздо больше!</p>
-            <button class="button button--secondary card__order-button">Показать все</button>
+            <button class="card__order-button button button--secondary">Показать все</button>
           </li>
         </ul>
       </section>
@@ -192,33 +193,33 @@
         <ul class="additionals__list">
           <li class="additionals__item additive">
             <h3 class="additive__title">Сахарозаменитель</h3>
-            <div class="additive__feature feature-container">
-              <span class="additive__key">1 упаковка (100 г)</span>
-              <span class="additive__value">200 ₽</span>
-            </div>
+            <dl class="additive__feature feature-container">
+              <dt class="additive__key">1 упаковка (100 г)</dt>
+              <dd class="additive__value">200 ₽</dd>
+            </dl>
             <a class="additive__order button" href="#">Заказать</a>
           </li>
           <li class="additionals__item additive">
             <h3 class="additive__title">Питьевая вода</h3>
-            <div class="additive__feature feature-container">
-              <span class="additive__key">5 литров</span>
-              <span class="additive__value">50 ₽</span>
-            </div>
+            <dl class="additive__feature feature-container">
+              <dt class="additive__key">5 литров</dt>
+              <dd class="additive__value">50 ₽</dd>
+            </dl>
             <a class="additive__order button" href="#">Заказать</a>
           </li>
           <li class="additionals__item additive">
             <h3 class="additive__title">Молоко</h3>
-            <div class="additive__feature feature-container">
-              <span class="additive__key">1 литр</span>
-              <span class="additive__value">100 ₽</span>
-            </div>
+            <dl class="additive__feature feature-container">
+              <dt class="additive__key">1 литр</dt>
+              <dd class="additive__value">100 ₽</dd>
+            </dl>
             <a class="additive__order button" href="#">Заказать</a>
           </li>
           <li class="additionals__item additive">
             <h3 class="additive__title">Витамины</h3>
-            <div class="additive__feature feature-container">
-              <span class="additive__key">1 упаковка (30 г)</span>
-              <span class="additive__value">300 ₽</span>
+            <dl class="additive__feature feature-container">
+              <dt class="additive__key">1 упаковка (30 г)</dt>
+              <dd class="additive__value">300 ₽</dd>
             </div>
             <a class="additive__order button" href="#">Заказать</a>
           </li>
@@ -266,9 +267,9 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/">
-        <span class="copyright__text">HTML Academy</span>
-        <img class="copyright__logo" src="img/footer/copyright-logo.svg" alt="">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+        <span class="page-footer__copyright-text">HTML Academy</span>
+        <img class="page-footer__copyright-logo" src="img/footer/copyright-logo.svg" alt="">
       </a>
     </footer>
   </body>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -49,28 +50,28 @@
               <input class="form__input-field" type="text" value="7" name="cat-age">
             </label>
           </fieldset>
-          <fieldset class="form__options">
+          <fieldset class="form__programs">
             <legend class="visually-hidden">Возможные программы питания</legend>
-            <ul class="form__options-list options-list">
-              <li class="options-list__item">
-                <label class="options-list__control">
+            <ul class="form__radio-list controls-list">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="radio" name="training-program" value="fit" checked>
-                  <span class="options-list__sign options-list__sign--radio"></span>
-                  <span class="options-list__title">Похудение</span>
+                  <span class="controls-list__sign controls-list__sign--radio"></span>
+                  <span class="controls-list__title">Похудение</span>
                 </label>
               </li>
-              <li class="options-list__item">
-                <label class="options-list__control">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="radio" name="training-program" value="fat">
-                  <span class="options-list__sign options-list__sign--radio"></span>
-                  <span class="options-list__title">Набор массы</span>
+                  <span class="controls-list__sign controls-list__sign--radio"></span>
+                  <span class="controls-list__title">Набор массы</span>
                 </label>
               </li>
-              <li class="options-list__item">
-                <label class="options-list__control">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="radio" name="training-program" value="idk">
-                  <span class="options-list__sign options-list__sign--radio"></span>
-                  <span class="options-list__title">Не знаю (Нужен ваш совет)</span>
+                  <span class="controls-list__sign controls-list__sign--radio"></span>
+                  <span class="controls-list__title">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -94,38 +95,38 @@
           </fieldset>
           <fieldset class="form__additionals">
             <legend class="visually-hidden">Дополнительно</legend>
-            <ul class="form__options-list options-list">
-              <li class="options-list__item">
-                <label class="options-list__control">
+            <ul class="form__checkbox-list controls-list">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="checkbox" name="additive" value="sweetener" checked>
-                  <span class="options-list__sign options-list__sign--checkbox"></span>
-                  <span class="options-list__title">Сахарозаменитель</span>
+                  <span class="controls-list__sign controls-list__sign--checkbox"></span>
+                  <span class="controls-list__title">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="options-list__item">
-                <label class="options-list__control">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="checkbox" name="additive" value="drinking-water">
-                  <span class="options-list__sign options-list__sign--checkbox"></span>
-                  <span class="options-list__title">Питьевая вода</span>
+                  <span class="controls-list__sign controls-list__sign--checkbox"></span>
+                  <span class="controls-list__title">Питьевая вода</span>
                 </label>
               </li>
-              <li class="options-list__item">
-                <label class="options-list__control">
+              <li class="controls-list__item">
+                <label class="controls-list__control">
                   <input class="visually-hidden" type="checkbox" name="additive" value="milk">
-                  <span class="options-list__sign options-list__sign--checkbox"></span>
-                  <span class="options-list__title">Молоко</span>
+                  <span class="controls-list__sign controls-list__sign--checkbox"></span>
+                  <span class="controls-list__title">Молоко</span>
                 </label>
               </li>
-              <li class="options-list__item">
-                <label class="options-list__control form-control">
+              <li class="controls-list__item">
+                <label class="controls-list__control form-control">
                   <input class="visually-hidden" type="checkbox" name="additive" value="vitamins">
-                  <span class="options-list__sign options-list__sign--checkbox"></span>
-                  <span class="options-list__title">Витамины</span>
+                  <span class="controls-list__sign controls-list__sign--checkbox"></span>
+                  <span class="controls-list__title">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="button form__submit" type="submit">Отправить заявку</button>
+          <button class="form__submit button" type="submit">Отправить заявку</button>
           <span class="form__additional-info">* — Обязательные поля</span>
         </form>
       </section>
@@ -168,9 +169,9 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/">
-        <span class="copyright__text">HTML Academy</span>
-        <img class="copyright__logo" src="img/footer/copyright-logo.svg" alt="">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+        <span class="page-footer__copyright-text">HTML Academy</span>
+        <img class="page-footer__copyright-logo" src="img/footer/copyright-logo.svg" alt="">
       </a>
     </footer>
   </body>

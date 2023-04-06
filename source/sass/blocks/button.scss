@@ -1,0 +1,8 @@
+@use "../site-styles/variables.scss" as *;
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $opstColor;
+  background-color: $cntrstBgColor;
+}

@@ -5,6 +5,7 @@
     "declaration-no-important": true,
     "indentation": [2, {"ignore": ["inside-parens"]}],
     "at-rule-no-unknown": null,
-    "at-rule-empty-line-before": null
+    "at-rule-empty-line-before": null,
+    "property-no-vendor-prefix": null
   }
 }

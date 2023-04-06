@@ -1,0 +1,65 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.example {
+  padding: 25px 20px 40px;
+  background-color: #eaeaea;
+}
+
+.example__title {
+  @include index-titles;
+}
+
+.example__desc {
+  @include index-descs;
+  margin-bottom: 20px;
+}
+
+.example__list {
+  @include reset-styles;
+  display: flex;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.example__feature {
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &:first-child {
+    margin-right: 32px;
+  }
+}
+
+.example__value {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__property {
+  display: block;
+  width: 62px;
+  padding: 9px 12px 0;
+  margin: auto;
+  margin-bottom: -33px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $altColor;
+  background-color: #eaeaea;
+  list-style: none;
+}
+
+.example__costs {
+  @include reset-styles;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__slider {
+}

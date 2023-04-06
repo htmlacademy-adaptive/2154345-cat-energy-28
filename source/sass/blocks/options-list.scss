@@ -1,0 +1,88 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.options {
+  padding: 10px 20px;
+}
+
+.options-list {
+  @include reset-styles;
+  display: flex;
+  flex-direction: column;
+}
+
+.options-list__item {
+  padding: 30px 20px 18px;
+  background-color: $accentBgColor;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+
+  &:first-child .options-list__title::before {
+    background-image: url("../../img/options/cat-slim.png");
+  }
+
+  &:last-child .options-list__title::before {
+    left: -75px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../../img/options/cat-fat.png");
+  }
+}
+
+.options-list__title {
+  position: relative;
+  margin: 0;
+  margin-left: 71px;
+  margin-bottom: 29px;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.options-list__title::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -70px;
+  display: block;
+  width: 50px;
+  height: 53px;
+
+}
+
+.options-list__desc {
+  @include index-descs;
+  position: relative;
+  margin-bottom: 38px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -23px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+.options-list__link {
+  position: relative;
+  color: $mainColor;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    top: 7px;
+    right: -39px;
+    content: "";
+    width: 24px;
+    height: 12px;
+    background-image: url("../../img/options/arrow.svg");
+  }
+}

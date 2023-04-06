@@ -1,3 +1,7 @@
+@use "site-styles/fonts.scss";
+
+@use "site-styles/base.scss";
+
 @use "blocks/page-header.scss";
 
 @use "blocks/navigation.scss";
@@ -42,33 +46,4 @@
 
 @use "blocks/page-footer.scss";
 
-@use "blocks/social-list.scss";
-
 @use "blocks/button.scss";
-
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-body {
-  font-family: "Oswald", "Open Sans", sans-serif;
-}
-
-$mainBgColor: #ffffff;
-$accentBGColor: #f2f2f2;
-$contrastColor: #68b738;
-$mainTextColor: #000000;
-$opstTextColor: #ffffff;
-$altTextColor: #444444;

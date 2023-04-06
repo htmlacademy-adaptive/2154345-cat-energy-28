@@ -1,0 +1,29 @@
+@use "../site-styles/variables.scss" as *;
+
+@mixin fontParams($size, $l-height, $weight: 400) {
+  font-size: #{$size}px;
+  font-weight: $weight;
+  line-height: #{$l-height}px;
+}
+
+@mixin reset-styles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+@mixin index-titles {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+@mixin index-descs {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Lato", "Open Sans", sans-serif;
+  color: $altColor;
+}

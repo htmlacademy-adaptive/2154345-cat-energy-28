@@ -1,0 +1,29 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__link {
+  @include reset-styles;
+  display: block;
+}
+
+.page-footer__logo {
+  display: block;
+}
+
+.page-footer__social-list {
+  @include reset-styles;
+  display: flex;
+}
+
+.page-footer__social-item {
+  display: block;
+}
+
+.page-footer__social-link {
+  display: block;
+}

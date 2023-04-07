@@ -1,0 +1,43 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.benefits-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.benefits-list__item {
+  @include desc-text(14, 18);
+  position: relative;
+  padding: 2px 0 2px 80px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 60px;
+    height: 60px;
+  }
+
+  &--leaf::before {
+    background-image: url("../../img/benefits/leaf.png");
+  }
+
+  &--boiling-water::before {
+    background-image: url("../../img/benefits/boiling-water.png");
+  }
+
+  &--eat::before {
+    background-image: url("../../img/benefits/eat.png");
+  }
+
+  &--clock::before {
+    background-image: url("../../img/benefits/clock.png");
+  }
+}

@@ -2,17 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кэт энерджи: форма</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
     <header class="page-header">
       <a class="page-header__link" href="index.html">
-        <img class="page-header__logo-icon" src="#" alt="">
-        <img class="page-header__logo-text" src="#" alt="">
+        <img class="page-header__logo" src="img/header/logo--mobile.png" alt="">
       </a>
       <nav class="navigation">
-        <button class="navigation__toggle burger-toggle"></button>
+        <button class="navigation__toggle">
+          <span class="navigation__toogle-elem"></span>
+        </button>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
@@ -25,6 +29,7 @@
           </li>
         </ul>
       </nav>
+      <script src="js/burger.js"></script>
     </header>
 
     <main class="page-container">

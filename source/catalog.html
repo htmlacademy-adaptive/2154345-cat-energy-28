@@ -2,18 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кэт энерджи: каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__link" href="index.html">
-        <img class="page-header__logo-icon" src="#" alt="">
-        <img class="page-header__logo-text" src="#" alt="">
+        <img class="page-header__logo" src="img/header/logo--mobile.png" alt="">
       </a>
       <nav class="navigation">
-        <button class="navigation__toggle burger-toggle"></button>
+        <button class="navigation__toggle">
+          <span class="navigation__toogle-elem"></span>
+        </button>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
@@ -26,6 +29,7 @@
           </li>
         </ul>
       </nav>
+      <script src="js/burger.js"></script>
     </header>
 
     <main class="page-container">
@@ -35,18 +39,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/chicken-500--phone.png" alt="">
-              <h2 class="card__title">Cat Energy PRO 500 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy PRO 500 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">500 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Курица</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <dd class="features-list__value">700 ₽</dd>
               </div>
@@ -56,18 +60,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/chicken-1000--phone.png" alt="">
-              <h2 class="card__title">Cat Energy PRO 1000 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy PRO 1000 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">1000 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Курица</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <dd class="features-list__value">1000 ₽</dd>
               </div>
@@ -77,18 +81,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/fish-500--phone.png" alt="">
-              <h2 class="card__title">Cat Energy PRO 500 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy PRO 500 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">500 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Рыба</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <d class="features-list__value">700 ₽</d>
               </div>
@@ -98,18 +102,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/fish-1000--phone.png" alt="">
-              <h2 class="card__title">Cat Energy PRO 1000 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy PRO 1000 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">1000 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Рыба</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <dd class="features-list__value">1000 ₽</dd>
               </div>
@@ -119,18 +123,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/buckwheat-500--phone.png" alt="">
-              <h2 class="card__title">Cat Energy slim 500 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy slim 500 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">500 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Гречка</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <dd class="features-list__value">400 ₽</dd>
               </div>
@@ -140,18 +144,18 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/buckwheat-1000--phone.png" alt="">
-              <h2 class="card__title">Cat Energy slim 1000 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy slim 1000 г</h2>
             <dl class="card__features-list features-list">
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
                 <dd class="features-list__value">1000 г</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Вкус</dt>
                 <dd class="features-list__value">Гречка</dd>
               </div>
-              <div class="features-list__item">
+              <div class="features-list__item feature-container">
                 <dt class="features-list__key">Цена</dt>
                 <dd class="features-list__value">700 ₽</dd>
               </div>
@@ -161,8 +165,8 @@
           <li class="products__item card">
             <a class="card__link" href="#">
               <img class="card__image" src="img/card/rice-500--phone.png" alt="">
-              <h2 class="card__title">Cat Energy slim 500 г</h2>
             </a>
+            <h2 class="card__title">Cat Energy slim 500 г</h2>
             <dl class="card__features-list features-list">
               <div class="features-list__item feature-container">
                 <dt class="features-list__key">Масса</dt>
@@ -232,12 +236,14 @@
         <h2 class="visually-hidden">Наш адрес.</h2>
         <address class="address__content">
           <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="address__house">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="address__city">Санкт-Петербург</p>
+          <div class="address__content-container">
+            <p class="address__house">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="address__city">Санкт-Петербург</p>
+          </div>
         </address>
         <div class="address__map">
-          <img class="address__map-image" src="#" alt="Город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A762942bd80ff3797636ceabe8652e195c9261f8fb0a48b6dc69a9039565665cd&amp;source=constructor"
+          <img class="address__map-image" src="img/map/map-image.png" alt="Город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
+          <iframe class="address__map-online" src="https://yandex.ru/map-widget/v1/?um=constructor%3A762942bd80ff3797636ceabe8652e195c9261f8fb0a48b6dc69a9039565665cd&amp;source=constructor"
             width="320" height="362" frameborder="0"></iframe>
         </div>
       </section>

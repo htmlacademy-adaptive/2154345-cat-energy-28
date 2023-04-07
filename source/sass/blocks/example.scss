@@ -11,7 +11,7 @@
 }
 
 .example__desc {
-  @include index-descs;
+  @include desc-text(14, 18);
   margin-bottom: 20px;
 }
 
@@ -59,7 +59,4 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-}
-
-.example__slider {
 }

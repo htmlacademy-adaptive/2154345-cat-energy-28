@@ -1,0 +1,45 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.products {
+  padding: 27px 20px;
+}
+
+.products__title {
+  @include reset-styles;
+  margin-bottom: 41px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.products__catalog-list {
+  @include reset-styles;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__item {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    content: "";
+    height: 1px;
+    background-color: #ebebeb;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    right: -20px;
+    content: "";
+    height: 1px;
+    background-color: #ebebeb;
+  }
+}

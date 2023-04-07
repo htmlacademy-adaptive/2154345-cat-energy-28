@@ -3,7 +3,8 @@
 .hero {
   padding: 35px 27px;
   padding-bottom: 10px;
-  background: url("../img/hero/green-kitty.jpg") no-repeat;
+  padding-top: 92px;
+  background: url("../img/hero/green-kitty.jpg") no-repeat 0 65px;
   text-align: center;
   color: $opstColor;
 }

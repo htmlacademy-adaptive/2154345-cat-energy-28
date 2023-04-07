@@ -20,10 +20,10 @@
   line-height: 40px;
 }
 
-@mixin index-descs {
+@mixin desc-text($fz, $lh) {
   margin: 0;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: #{$fz}px;
+  line-height: #{$lh}px;
   font-family: "Lato", "Open Sans", sans-serif;
   color: $altColor;
 }

@@ -1,0 +1,18 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.features-list {
+  @include reset-styles;
+  display: grid;
+}
+
+.features-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-list__key {
+}
+
+.features-list__value {
+}

@@ -1,0 +1,22 @@
+@use "../site-styles/mixins.scss" as *;
+
+.form-container {
+  padding: 27px 20px 32px;
+}
+
+.form-container__title {
+  @include reset-styles;
+  margin-bottom: 37px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.form-container__slogan {
+  @include reset-styles;
+  max-width: 226px;
+  margin-bottom: 39px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}

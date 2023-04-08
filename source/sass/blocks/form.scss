@@ -1,0 +1,145 @@
+@use "../site-styles/variables.scss" as *;
+@use "../site-styles/mixins.scss" as *;
+
+.form__personal-info {
+  @include reset-styles;
+  position: relative;
+  padding-bottom: 23px;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+.form__input {
+  display: grid;
+  grid-template-columns: max-content minmax(173px, 228px);
+  grid-template-rows: 45px;
+  gap: 13px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $altColor;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.form__input-title {
+  display: inline-block;
+  padding: 14px 0 13px;
+  text-transform: uppercase;
+}
+
+.form__input-field {
+  @include reset-styles;
+  display: inline-block;
+  padding: 0 20px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  color: $altColor;
+  border: 1px solid #cdcdcd;
+}
+
+.form__programs {
+  @include reset-styles;
+  position: relative;
+  padding: 22px 0 19px;
+  margin-bottom: 26px;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+.form__owner-info {
+  @include reset-styles;
+  border: none;
+  margin-bottom: 24px;
+
+  .form__title {
+    margin-bottom: 26px;
+  }
+}
+
+.form__title {
+  @include reset-styles;
+  display: block;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__comment {
+  @include reset-styles;
+  border: none;
+  margin-bottom: 23px;
+
+  .form__title {
+    margin-bottom: 38px;
+  }
+}
+
+.form__textarea {
+  @include reset-styles;
+  display: block;
+  width: 100%;
+  padding: 9px 12px 0 15px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.form__additionals {
+  @include reset-styles;
+  margin-bottom: 34px;
+  border: none;
+
+  .form__title {
+    margin-bottom: 34px;
+  }
+}
+
+.form__submit {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form__additional-info {
+  @include desc-text(14, 16);
+  display: block;
+  color: $mainColor;
+  text-align: center;
+}

@@ -115,9 +115,8 @@
     top: 63px;
     display: block;
     width: 100%;
-    height: 66px;
+    height: 66px * 3;
     text-align: center;
-    z-index: -10;
   }
 
   .navigatoin__list--active {
@@ -141,6 +140,7 @@
     border-bottom: 1px solid #e6e6e6;
     box-sizing: border-box;
     transition: all 0.5s ease 0s;
+    z-index: 5;
   }
 
   .navigation__link {

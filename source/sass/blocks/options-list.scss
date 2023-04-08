@@ -76,10 +76,10 @@
   text-transform: uppercase;
 
   &::after {
+    content: "";
     position: absolute;
     top: 7px;
     right: -39px;
-    content: "";
     width: 24px;
     height: 12px;
     background-image: url("../../img/options/arrow.svg");

@@ -1,9 +1,6 @@
 @use "../site-styles/variables.scss" as *;
 @use "../site-styles/mixins.scss" as *;
 
-.address {
-}
-
 .address__content {
   display: grid;
   grid-template-columns: 139px 139px;

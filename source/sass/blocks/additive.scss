@@ -1,10 +1,6 @@
 @use "../site-styles/variables.scss" as *;
 @use "../site-styles/mixins.scss" as *;
 
-.additive {
-
-}
-
 .additive__title {
   @include reset-styles;
   font-size: 16px;
@@ -15,15 +11,6 @@
 
 .additive__feature {
   @include desc-text(14, 14);
-}
-
-.feature-container {
-}
-
-.additive__key {
-}
-
-.additive__value {
 }
 
 .additive__order {

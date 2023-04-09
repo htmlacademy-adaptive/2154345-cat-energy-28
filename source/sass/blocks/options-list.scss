@@ -20,14 +20,14 @@
   }
 
   &:first-child .options-list__title::before {
-    background-image: url("../../img/options/cat-slim.png");
+    background-image: url("../img/options/cat-slim.png");
   }
 
   &:last-child .options-list__title::before {
     left: -75px;
     width: 67px;
     height: 50px;
-    background-image: url("../../img/options/cat-fat.png");
+    background-image: url("../img/options/cat-fat.png");
   }
 }
 
@@ -82,6 +82,6 @@
     right: -39px;
     width: 24px;
     height: 12px;
-    background-image: url("../../img/options/arrow.svg");
+    background-image: url("../img/options/arrow.svg");
   }
 }

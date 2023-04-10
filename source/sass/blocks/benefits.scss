@@ -1,10 +1,11 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .benefits {
   padding: 10px 20px 49px;
 }
 
 .benefits__title {
-  @include index-titles;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
 }

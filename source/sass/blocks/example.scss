@@ -1,32 +1,36 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .example {
   padding: 25px 20px 40px;
-  background-color: #eaeaea;
+  background-color: $color-whisper;
 }
 
 .example__title {
-  @include index-titles;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .example__desc {
-  @include desc-text(14, 18);
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-lato;
+  color: $color-charcoal;
 }
 
 .example__list {
-  @include reset-styles;
   display: flex;
+  margin: 0 0 36px 0;
+  padding: 0;
   text-align: center;
-  margin-bottom: 36px;
+  list-style-type: none;
 }
 
 .example__feature {
   width: 124px;
-  padding-top: 14px;
-  padding-bottom: 17px;
-  border: 1px solid #cdcdcd;
+  padding: 14px 0 17px 0;
+  border: 1px solid $color-very-light-grey;
   border-radius: 3px;
 
   &:first-child {
@@ -41,20 +45,18 @@
 
 .example__property {
   display: block;
-  width: 62px;
+  width: 90px;
   padding: 9px 12px 0;
-  margin: auto;
-  margin-bottom: -33px;
+  margin: auto auto -33px auto;
   font-size: 12px;
   line-height: 12px;
-  color: $altColor;
-  background-color: #eaeaea;
-  list-style: none;
+  color: $color-charcoal;
+  background-color: $color-whisper;
+  list-style-type: none;
 }
 
 .example__costs {
-  @include reset-styles;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;

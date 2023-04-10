@@ -1,6 +1,3 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .benefits-list {
   margin: 0;
   padding: 0;
@@ -8,9 +5,13 @@
 }
 
 .benefits-list__item {
-  @include desc-text(14, 18);
   position: relative;
   padding: 2px 0 2px 80px;
+  margin: 0;
+  font-family: $font-lato;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-charcoal;
 
   &:not(:last-child) {
     margin-bottom: 24px;
@@ -20,9 +21,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
     width: 60px;
     height: 60px;
+    content: "";
   }
 
   &--leaf::before {

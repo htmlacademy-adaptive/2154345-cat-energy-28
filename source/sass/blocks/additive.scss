@@ -1,8 +1,5 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .additive__title {
-  @include reset-styles;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 14px;
@@ -10,7 +7,10 @@
 }
 
 .additive__feature {
-  @include desc-text(14, 14);
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-lato;
+  color: $color-charcoal;
 }
 
 .additive__order {

@@ -1,49 +1,47 @@
-@use "site-styles/fonts.scss";
+@import "global/fonts.scss";
 
-@use "site-styles/base.scss";
+@import "global/variables.scss";
 
-@use "blocks/page-header.scss";
+@import "global/reboot.scss";
 
-@use "blocks/navigation.scss";
+@import "global/utils.scss";
 
-@use "blocks/page-intro.scss";
+@import "blocks/page-header.scss";
 
-@use "blocks/hero.scss";
+@import "blocks/navigation.scss";
 
-@use "blocks/page-container.scss";
+@import "blocks/hero.scss";
 
-@use "blocks/options.scss";
+@import "blocks/options-list.scss";
 
-@use "blocks/options-list.scss";
+@import "blocks/benefits.scss";
 
-@use "blocks/benefits.scss";
+@import "blocks/benefits-list.scss";
 
-@use "blocks/benefits-list.scss";
+@import "blocks/example.scss";
 
-@use "blocks/example.scss";
+@import "blocks/slider.scss";
 
-@use "blocks/slider.scss";
+@import "blocks/form-container.scss";
 
-@use "blocks/form-container.scss";
+@import "blocks/form.scss";
 
-@use "blocks/form.scss";
+@import "blocks/controls-list.scss";
 
-@use "blocks/controls-list.scss";
+@import "blocks/products.scss";
 
-@use "blocks/products.scss";
+@import "blocks/card.scss";
 
-@use "blocks/card.scss";
+@import "blocks/features-list.scss";
 
-@use "blocks/features-list.scss";
+@import "blocks/additionals.scss";
 
-@use "blocks/additionals.scss";
+@import "blocks/additive.scss";
 
-@use "blocks/additive.scss";
+@import "blocks/feature-container.scss";
 
-@use "blocks/feature-container.scss";
+@import "blocks/address.scss";
 
-@use "blocks/address.scss";
+@import "blocks/page-footer.scss";
 
-@use "blocks/page-footer.scss";
-
-@use "blocks/button.scss";
+@import "blocks/button.scss";

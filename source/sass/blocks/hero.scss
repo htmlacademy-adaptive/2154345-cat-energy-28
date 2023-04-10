@@ -1,11 +1,20 @@
-@use "../site-styles/variables.scss" as *;
-
 .hero {
+  display: flex;
+  flex-direction: column;
   padding: 35px 27px;
   padding-bottom: 10px;
-  background: url("../img/hero/green-kitty.jpg") no-repeat 0 0;
+  background-image: url("../img/hero/green-kitty.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   text-align: center;
-  color: $opstColor;
+  color: $color-default-white;
+
+  @media (min-width: $vp-769) {
+    padding: 62px 118px 0;
+    background-image: none;
+    color: $color-default-black;
+    text-align: left;
+  }
 }
 
 .hero__title {
@@ -14,6 +23,13 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+
+  @media (min-width: $vp-769) {
+    max-width: 420px;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .hero__slogan {
@@ -22,6 +38,12 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $vp-769) {
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .hero__image {
@@ -34,4 +56,15 @@
   padding: 7px;
   font-size: 14px;
   line-height: 18px;
+
+  @media (max-width: $vp-769) {
+    order: 4;
+  }
+
+  @media (min-width: $vp-769) {
+    width: max-content;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

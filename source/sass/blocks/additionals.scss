@@ -1,20 +1,17 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .additionals {
   padding: 25px 20px 35px;
 }
 
 .additionals__title {
-  @include reset-styles;
-  margin-bottom: 36px;
+  margin: 0 0 36px 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .additionals__list {
-  @include reset-styles;
+  margin: 0;
+  list-style-type: none;
 }
 
 .additionals__item {
@@ -22,12 +19,16 @@
 }
 
 .additionals__promo {
-  @include desc-text(16, 20);
   position: relative;
   display: inline-block;
+  margin: 0;
   padding: 187px 60px 43px;
-  color: $opstColor;
-  background: url("../img/promo/green-kitty.jpg");
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-lato;
+  color: $color-default-white;
+  background-image: url("../img/promo/green-kitty.jpg");
+  background-repeat: no-repeat;
   text-align: center;
 
   &::before {
@@ -38,6 +39,7 @@
     transform: translateX(-50%);
     width: 78px;
     height: 80px;
-    background: url("../../img/promo/gift-icon.svg");
+    background-image: url("../img/promo/gift-icon.svg");
+    background-repeat: none;
   }
 }

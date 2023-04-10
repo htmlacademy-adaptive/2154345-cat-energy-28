@@ -1,22 +1,20 @@
-@use "../site-styles/variables.scss" as *;
-@use "../site-styles/mixins.scss" as *;
-
 .products {
   padding: 27px 20px;
 }
 
 .products__title {
-  @include reset-styles;
-  margin-bottom: 41px;
+  margin: 0 0 41px 0;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
 }
 
 .products__catalog-list {
-  @include reset-styles;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .products__item {
@@ -28,9 +26,9 @@
     top: 0;
     left: -20px;
     right: -20px;
-    content: "";
     height: 1px;
-    background-color: #ebebeb;
+    background-color: $color-whisper;
+    content: "";
   }
 
   &::after {
@@ -38,8 +36,8 @@
     bottom: -1px;
     left: -20px;
     right: -20px;
-    content: "";
     height: 1px;
-    background-color: #ebebeb;
+    background-color: $color-whisper;
+    content: "";
   }
 }

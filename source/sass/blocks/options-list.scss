@@ -7,11 +7,13 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
 .options-list__item {
-  padding: 30px 20px 18px;
+  padding: 30px 20px 18px 20px;
+
   background-color: $color-white-smoke;
 
   &:first-child {
@@ -24,8 +26,10 @@
 
   &:last-child .options-list__title::before {
     left: -75px;
+
     width: 67px;
     height: 50px;
+
     background-image: url("../img/options/cat-fat.png");
   }
 
@@ -36,49 +40,58 @@
 
 .options-list__title {
   position: relative;
+
   margin: 0 0 29px 71px;
-  font-size: 24px;
+
   font-weight: 400;
+  font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: $vp-769) {
     margin: 0 0 24px 0;
+
     font-size: 36px;
     line-height: 36px;
   }
 }
 
 .options-list__title::before {
+  content: "";
   position: absolute;
   top: -10px;
   left: -70px;
+
   display: block;
   width: 50px;
   height: 53px;
-  content: "";
 }
 
 .options-list__desc {
   position: relative;
+
   margin: 0 0 38px 0;
-  font-family: $font-lato;
+
   font-size: 14px;
   line-height: 18px;
+  font-family: $font-lato;
   color: $color-charcoal;
 
   &::after {
+    content: "";
     position: absolute;
-    left: 0;
     right: 0;
     bottom: -23px;
+    left: 0;
+
     height: 1px;
+
     background-color: $color-gainsboro;
-    content: "";
   }
 
   @media (min-width: $vp-769) {
     margin: 0 0 48px 0;
+
     font-size: 16px;
     line-height: 24px;
     font-family: $font-lato;
@@ -92,24 +105,27 @@
 
 .options-list__link {
   position: relative;
+
   display: block;
   width: max-content;
   padding: 4px 0;
+
   font-size: 16px;
   line-height: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
   color: $color-default-black;
+  text-transform: uppercase;
 
   &::after {
+    content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     right: -39px;
-    height: 12px;
+
     width: 24px;
+    height: 12px;
+
     background-image: url("../img/options/arrow.svg");
-    content: "";
+    transform: translateY(-50%);
   }
 
   @media (min-width: $vp-769) {

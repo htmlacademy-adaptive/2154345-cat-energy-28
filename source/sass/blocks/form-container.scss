@@ -1,17 +1,19 @@
 .form-container {
-  padding: 27px 20px 32px;
+  padding: 27px 20px 32px 20px;
 }
 
 .form-container__title {
   margin: 0 0 37px 0;
-  font-size: 36px;
+
   font-weight: 400;
+  font-size: 36px;
   line-height: 36px;
 }
 
 .form-container__slogan {
   max-width: 226px;
   margin: 0 0 39px 0;
+
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;

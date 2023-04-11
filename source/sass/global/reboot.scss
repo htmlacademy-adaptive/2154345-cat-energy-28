@@ -11,10 +11,17 @@ html {
 body {
   margin: 0;
   padding: 0;
+
   font-family: $font-oswald;
 }
 
 img {
-  height: auto;
   max-width: 100%;
+  height: auto;
+}
+
+a {
+  margin: 0;
+
+  text-decoration: none;
 }

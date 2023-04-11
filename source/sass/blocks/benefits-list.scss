@@ -1,29 +1,33 @@
 .benefits-list {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
 .benefits-list__item {
   position: relative;
-  padding: 2px 0 2px 80px;
+
   margin: 0;
-  font-family: $font-lato;
+  padding: 2px 0 2px 80px;
+
   font-size: 14px;
   line-height: 18px;
+  font-family: $font-lato;
   color: $color-charcoal;
 
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+
     width: 60px;
     height: 60px;
-    content: "";
   }
 
   &--leaf::before {

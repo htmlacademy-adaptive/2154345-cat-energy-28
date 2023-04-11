@@ -1,8 +1,12 @@
 .benefits-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+
+  gap: 20px;
 }
 
 .benefits-list__item {
@@ -15,10 +19,6 @@
   line-height: 18px;
   font-family: $font-lato;
   color: $color-charcoal;
-
-  &:not(:last-child) {
-    margin: 0 0 24px 0;
-  }
 
   &::before {
     content: "";

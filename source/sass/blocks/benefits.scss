@@ -1,10 +1,22 @@
 .benefits {
   padding: 10px 20px 49px 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 35px 20px 47px 20px;
+  }
 }
 
 .benefits__title {
   margin: 0 0 40px 0;
-  font-size: 36px;
+
   font-weight: 400;
+  font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 32px 0;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

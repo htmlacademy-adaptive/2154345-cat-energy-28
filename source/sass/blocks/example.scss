@@ -23,6 +23,7 @@
 
 .example__list {
   display: flex;
+  justify-content: space-between;
   margin: 0 0 36px 0;
   padding: 0;
 
@@ -31,15 +32,11 @@
 }
 
 .example__feature {
-  width: 124px;
+  width: 44.3%;
   padding: 14px 0 17px 0;
 
   border: 1px solid $color-very-light-grey;
   border-radius: 3px;
-
-  &:first-child {
-    margin-right: 32px;
-  }
 }
 
 .example__value {
@@ -68,4 +65,8 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.example__slider {
+  margin: 0 auto;
 }

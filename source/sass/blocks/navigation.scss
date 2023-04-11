@@ -5,6 +5,7 @@
 
 .navigation__toggle {
   position: relative;
+  z-index: 10;
 
   width: 24px;
   height: 16px;
@@ -17,7 +18,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -0.1px;
     right: 0;
     left: 0;
 
@@ -42,7 +43,7 @@
     transition: all 1s ease 0s;
   }
 
-  @media (min-width: $vp-769) {
+  @media (min-width: $vp-768) {
     display: none;
   }
 }
@@ -125,19 +126,20 @@
 
 .navigation__list {
   position: absolute;
-  top: 63px;
+  top: 0;
   left: 0;
+  z-index: 5;
 
   display: block;
   width: 100%;
-  height: 66px * 3;
+  height: 66px * 4;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
   text-align: center;
 
-  @media (min-width: $vp-769) {
+  @media (min-width: $vp-768) {
     position: static;
 
     display: flex;
@@ -150,8 +152,8 @@
 
 //Поочередно выдвигает пункты бургерного меню(первый(i = 0 + 1) элемент примет положение top: 0 * 66px, второй(i = 1 + 1) top: 66px...
 .navigatoin__list--active {
-  @for $i from 0 through 2 {
-    .navigation__item:nth-child(#{$i + 1}) {
+  @for $i from 1 through 3 {
+    .navigation__item:nth-child(#{$i}) {
       top: #{$i * 66}px;
     }
   }
@@ -174,7 +176,7 @@
 
   transition: all 0.5s ease 0s;
 
-  @media (min-width: $vp-769) {
+  @media (min-width: $vp-768) {
     position: static;
 
     width: auto;
@@ -195,7 +197,7 @@
   color: $color-default-black;
   text-transform: uppercase;
 
-  @media (min-width: $vp-769) {
+  @media (min-width: $vp-768) {
     padding: 0 0 12px 0;
 
     font-weight: 400;

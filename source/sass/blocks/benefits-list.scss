@@ -1,0 +1,44 @@
+.benefits-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.benefits-list__item {
+  position: relative;
+  padding: 2px 0 2px 80px;
+  margin: 0;
+  font-family: $font-lato;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-charcoal;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    content: "";
+  }
+
+  &--leaf::before {
+    background-image: url("../img/benefits/leaf.png");
+  }
+
+  &--boiling-water::before {
+    background-image: url("../img/benefits/boiling-water.png");
+  }
+
+  &--eat::before {
+    background-image: url("../img/benefits/eat.png");
+  }
+
+  &--clock::before {
+    background-image: url("../img/benefits/clock.png");
+  }
+}

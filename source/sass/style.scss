@@ -1,1 +1,45 @@
-// Начните писать стили здесь
+@import "global/fonts.scss";
+
+@import "global/variables.scss";
+
+@import "global/reboot.scss";
+
+@import "global/utils.scss";
+
+@import "blocks/page-header.scss";
+
+@import "blocks/navigation.scss";
+
+@import "blocks/hero.scss";
+
+@import "blocks/options-list.scss";
+
+@import "blocks/benefits.scss";
+
+@import "blocks/benefits-list.scss";
+
+@import "blocks/example.scss";
+
+@import "blocks/slider.scss";
+
+@import "blocks/form-container.scss";
+
+@import "blocks/form.scss";
+
+@import "blocks/controls-list.scss";
+
+@import "blocks/products.scss";
+
+@import "blocks/card.scss";
+
+@import "blocks/features-list.scss";
+
+@import "blocks/additionals.scss";
+
+@import "blocks/additive.scss";
+
+@import "blocks/address.scss";
+
+@import "blocks/page-footer.scss";
+
+@import "blocks/button.scss";

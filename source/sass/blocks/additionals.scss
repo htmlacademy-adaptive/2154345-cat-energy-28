@@ -1,0 +1,45 @@
+.additionals {
+  padding: 25px 20px 35px;
+}
+
+.additionals__title {
+  margin: 0 0 36px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.additionals__list {
+  margin: 0;
+  list-style-type: none;
+}
+
+.additionals__item {
+  padding: 13px 0 19px;
+}
+
+.additionals__promo {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 187px 60px 43px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-lato;
+  color: $color-default-white;
+  background-image: url("../img/promo/green-kitty.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 59px;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/promo/gift-icon.svg");
+    background-repeat: none;
+  }
+}

@@ -1,0 +1,64 @@
+.example {
+  padding: 25px 20px 40px;
+  background-color: $color-whisper;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.example__desc {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-lato;
+  color: $color-charcoal;
+}
+
+.example__list {
+  display: flex;
+  margin: 0 0 36px 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.example__feature {
+  width: 124px;
+  padding: 14px 0 17px 0;
+  border: 1px solid $color-very-light-grey;
+  border-radius: 3px;
+
+  &:first-child {
+    margin-right: 32px;
+  }
+}
+
+.example__value {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__property {
+  display: block;
+  width: 90px;
+  padding: 9px 12px 0;
+  margin: auto auto -33px auto;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-charcoal;
+  background-color: $color-whisper;
+  list-style-type: none;
+}
+
+.example__costs {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}

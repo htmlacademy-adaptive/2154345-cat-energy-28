@@ -1,0 +1,143 @@
+.form__personal-info {
+  position: relative;
+  margin: 0;
+  padding: 0 0 23px 0;
+  border: none;
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $color-gainsboro;
+    content: "";
+  }
+}
+
+.form__input {
+  display: grid;
+  grid-template-columns: max-content minmax(173px, 228px);
+  grid-template-rows: 45px;
+  gap: 13px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-charcoal;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.form__input-title {
+  display: inline-block;
+  padding: 14px 0 13px;
+  text-transform: uppercase;
+}
+
+.form__input-field {
+  display: inline-block;
+  margin: 0;
+  padding: 0 20px;
+  font-family: $font-oswald;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-charcoal;
+  border: 1px solid $color-very-light-grey;
+}
+
+.form__programs {
+  position: relative;
+  margin: 0 0 26px 0;
+  padding: 22px 0 19px;
+  border: none;
+
+  &::before {
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $color-gainsboro;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $color-gainsboro;
+    content: "";
+  }
+}
+
+.form__owner-info {
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: none;
+
+  .form__title {
+    margin-bottom: 26px;
+  }
+}
+
+.form__title {
+  display: block;
+  margin: 0;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__comment {
+  margin: 0 0 23px 0;
+  padding: 0;
+  border: none;
+
+  .form__title {
+    margin-bottom: 38px;
+  }
+}
+
+.form__textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 9px 12px 0 15px;
+  font-family: $font-oswald;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 1px solid $color-very-light-grey;
+  resize: none;
+}
+
+.form__additionals {
+  margin: 0 0 34px 0;
+  padding: 0;
+  border: none;
+
+  .form__title {
+    margin-bottom: 34px;
+  }
+}
+
+.form__submit {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form__additional-info {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-lato;
+  color: $color-default-black;
+  text-align: center;
+}

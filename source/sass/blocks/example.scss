@@ -1,7 +1,18 @@
 .example {
+  display: grid;
   padding: 25px 20px 40px 20px;
 
   background-color: $color-whisper;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, min-content);
+
+  @media (min-width: $vp-768) {
+    background-color: $color-default-white;
+
+    grid-template-columns: 51.7% 1fr;
+    grid-template-rows: repeat(4, min-content);
+  }
 }
 
 .example__title {
@@ -10,6 +21,9 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 .example__desc {
@@ -19,29 +33,62 @@
   line-height: 18px;
   font-family: $font-lato;
   color: $color-charcoal;
+
+  grid-column: 1 / -1;
+  grid-row: 2;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 36px 0;
+  margin: 0;
   padding: 0;
 
   list-style-type: none;
   text-align: center;
+
+  gap: 32px;
+  grid-column: 1 / -1;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 54px 0;
+
+    grid-column: 1;
+  }
 }
 
 .example__feature {
-  width: 44.3%;
+  width: 100%;
+  height: 56px;
   padding: 14px 0 17px 0;
 
   border: 1px solid $color-very-light-grey;
   border-radius: 3px;
+
+  &:last-child {
+    grid-column: 2;
+  }
+
+  @media (min-width: $vp-768) {
+    height: 72px;
+  }
 }
 
 .example__value {
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $vp-768) {
+    height: 100%;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__property {
@@ -56,17 +103,49 @@
   color: $color-charcoal;
 
   background-color: $color-whisper;
+
+  @media (min-width: $vp-768) {
+    width: max-content;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $color-default-white;
+  }
 }
 
 .example__costs {
-  margin: 0 0 20px 0;
+  margin: 40px 0 20px 0;
 
   font-size: 14px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  grid-column: 1 / -1;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    max-width: 180px;
+    margin: 0 0 0 auto;
+
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+
+    grid-column: 2;
+  }
 }
 
 .example__slider {
   margin: 0 auto;
+
+  grid-column: 1 / -1;
+  grid-row: 5;
+
+  @media (min-width: $vp-768) {
+    background-color: $color-whisper;
+
+    grid-row: 4;
+  }
 }

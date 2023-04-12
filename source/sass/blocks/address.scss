@@ -1,11 +1,17 @@
 .address__content {
   display: grid;
-  padding: 26px 20px;
+  padding: 26px 70px;
 
   background-color: $color-white-smoke;
 
   gap: 2px;
-  grid-template-columns: 139px 139px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $vp-768) {
+    background-color: $color-default-white;
+
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 .address__slogan {
@@ -15,6 +21,11 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .address__content-container {
@@ -25,6 +36,15 @@
   font-size: 14px;
   line-height: 20px;
   font-family: $font-lato;
+
+  @media (min-width: $vp-768) {
+    min-width: 160px;
+
+    font-size: 16px;
+    text-align: right;
+
+    grid-column: 3;
+  }
 }
 
 .address__house {

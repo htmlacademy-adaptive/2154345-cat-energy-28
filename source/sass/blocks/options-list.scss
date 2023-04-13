@@ -1,16 +1,35 @@
 .options {
   padding: 10px 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 10px 30px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 82px 110px 10px 110px;
+  }
 }
 
 .options-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   margin: 0;
   padding: 0;
 
   list-style-type: none;
 
   gap: 20px;
+
+  @media (min-width: $vp-768) {
+    gap: 30px;
+  }
+
+  @media (min-width: $vp-1440) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 80px;
+  }
 }
 
 .options-list__item {
@@ -31,7 +50,7 @@
     background-image: url("../img/options/cat-fat.png");
   }
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-768) and (max-width: $vp-1440) {
     position: relative;
 
     padding: 77px 316px 53px 52px;
@@ -59,6 +78,10 @@
       background-image: url("../img/options/cat-fat--tablet.png");
     }
   }
+
+  @media (min-width: $vp-1440) {
+    padding: 77px 52px 55px 52px;
+  }
 }
 
 .options-list__title {
@@ -77,6 +100,10 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 73px 162px;
+  }
 }
 
 .options-list__title::before {
@@ -89,7 +116,7 @@
   width: 50px;
   height: 53px;
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-768) and (max-width: $vp-1440) {
     content: none;
   }
 }

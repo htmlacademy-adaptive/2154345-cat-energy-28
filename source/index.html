@@ -14,7 +14,7 @@
         <a class="page-header__link" href="index.html">
           <img class="page-header__logo" src="img/header/logo--mobile.png" alt="">
         </a>
-        <nav class="navigation">
+        <nav class="navigation page-header__navigation">
           <button class="navigation__toggle">
             <span class="navigation__toogle-elem"></span>
           </button>
@@ -84,26 +84,31 @@
       </section>
       <section class="example">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__desc">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не
-          менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <dl class="example__list">
-          <div class="example__feature">
-            <dt class="example__value">5 кг</dt>
-            <dd class="example__property">снижение веса</dd>
+        <div class="example__item">
+          <p class="example__desc">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+            Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не
+            менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <dl class="example__list">
+            <div class="example__feature">
+              <dt class="example__value">5 кг</dt>
+              <dd class="example__property">снижение веса</dd>
+            </div>
+            <div class="example__feature">
+              <dt class="example__value">60 дней</dt>
+              <dd class="example__property">затрачено времени</dd>
+            </div>
+          </dl>
+          <p class="example__costs">
+            <span class="example__costs__text">Затраты на питание:</span>
+            <span class="example__costs__value"> 15 000 РУБ.</span>
+          </p>
+          <div class="example__slider slider">
+            <img class="slider__photo slider__photo--sublay" src="img/example/fat-kitty.png" alt="Большой кот" width="280" height="256">
+            <img class="slider__photo slider__photo--overlay" src="img/example/slim-kitty.png" alt="Стройный кот" width="280" height="256">
+            <input class="slider__control" type="range" min="0" max="100" oninput="slide()">
           </div>
-          <div class="example__feature">
-            <dt class="example__value">60 дней</dt>
-            <dd class="example__property">затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
-        <div class="example__slider slider">
-          <img class="slider__photo slider__photo--sublay" src="img/example/fat-kitty.png" alt="Большой кот" width="280" height="256">
-          <img class="slider__photo slider__photo--overlay" src="img/example/slim-kitty.png" alt="Стройный кот" width="280" height="256">
-          <input class="slider__control" type="range" min="0" max="100" oninput="slide()">
         </div>
         <script src="js/app.js"></script>
       </section>
@@ -128,7 +133,7 @@
       <a class="page-footer__link page-footer__element" href="index.html">
         <img class="page-footer__logo" src="img/footer/logo.png" alt="">
       </a>
-      <div class="page-footer__element">
+      <div class="page-footer__element page-footer__social-list-container">
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">

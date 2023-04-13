@@ -3,7 +3,24 @@
   padding: 19px 0 25px 0;
 
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 14px 40px;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 13px;
+}
+
+.card--last-child {
+  grid-template-columns: 1fr;
+
+  .card__link {
+    grid-row: 1;
+  }
+
+  .card__title {
+    grid-column: 1;
+  }
+
+  .card__order-button {
+    grid-row: 3;
+  }
 }
 
 .card__link {
@@ -34,7 +51,16 @@
   grid-row: 1;
 }
 
+.card__title-link {
+  color: $color-nero;
+}
+
 .card__features-list {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-lato;
+  color: $color-charcoal;
+
   grid-column: 2;
   grid-row: 2;
 }

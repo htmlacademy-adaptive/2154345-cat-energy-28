@@ -8,6 +8,7 @@
 
   background-image: url("../img/hero/green-kitty.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
 
   @media (min-width: $vp-768) {
     padding: 62px 118px 0 118px;
@@ -73,4 +74,8 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  // @media (min-width: $vp-1440) {
+
+  // }
 }

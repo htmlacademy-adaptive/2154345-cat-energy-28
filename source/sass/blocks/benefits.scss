@@ -1,8 +1,23 @@
 .benefits {
+  position: relative;
   padding: 10px 20px 49px 20px;
 
-  @media (min-width: $vp-768) {
-    padding: 35px 31px 47px 31px;
+  @media (min-width: $vp-768) and (max-width: $vp-1440) {
+    padding: 35px 30px 47px 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: $color-whisper;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 61px 110px 10px 110px;
   }
 }
 

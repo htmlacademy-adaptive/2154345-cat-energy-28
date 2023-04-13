@@ -1,6 +1,6 @@
 .address__content {
   display: grid;
-  padding: 26px 70px;
+  padding: 26px 20px;
 
   background-color: $color-white-smoke;
 
@@ -8,8 +8,11 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $vp-768) {
+    padding: 56px 70px;
+
     background-color: $color-default-white;
 
+    gap: none;
     grid-template-columns: 1fr 2fr 1fr;
   }
 }

@@ -16,8 +16,9 @@
     margin: 0 11.7% 0 0;
   }
 
-  @media (min-width: $vp-1330) {
-    max-width: 1800px;
+  @media (min-width: $vp-1440) {
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
   }
 }
@@ -88,7 +89,7 @@
     }
   }
 
-  @media (min-width: $vp-1330) {
+  @media (min-width: $vp-1440) {
     max-width: 250px;
   }
 }

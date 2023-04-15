@@ -147,9 +147,13 @@
     min-width: 440px;
     height: auto;
   }
+
+  @media (min-width: $vp-1024) {
+    min-width: 478px;
+  }
 }
 
-//Поочередно выдвигает пункты бургерного меню(первый(i = 0 + 1) элемент примет положение top: 0 * 66px, второй(i = 1 + 1) top: 66px...
+//Поочередно выдвигает пункты бургерного меню(первый(i = 1) элемент примет положение top: 1 * 66px, второй(i = 2) top: 132px...
 .navigatoin__list--active {
   @for $i from 1 through 3 {
     .navigation__item:nth-child(#{$i}) {
@@ -202,5 +206,11 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media (min-width: $vp-1024) {
+    font-size: 20px;
+    line-height: 30px;
+    // color: $color-default-white;
   }
 }

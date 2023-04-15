@@ -1,13 +1,13 @@
 .example {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 40px 0;
   background-color: $color-whisper;
 
   @media (min-width: $vp-768) {
-    padding: 43px 30px 100px 30px;
+    padding: 43px 0 100px 0;
     background-color: $color-default-white;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 59px 0 0 0;
   }
 }
@@ -29,9 +29,9 @@
     line-height: 60px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     margin: 0;
-    padding: 0 110px 76px 110px;
+    padding: 0 0 76px 0;
   }
 }
 
@@ -48,8 +48,8 @@
     grid-template-rows: repeat(3, min-content);
   }
 
-  @media (min-width: $vp-1440) {
-    padding: 70px 110px 75px 110px;
+  @media (min-width: $vp-1024) {
+    padding: 70px 0 75px 0;
 
     background-color: $color-whisper;
     grid-template-columns: 34.8% 1fr;
@@ -74,7 +74,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-column: 1;
   }
 }
@@ -97,7 +97,7 @@
     grid-column: 1;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     width: 84%;
   }
 }
@@ -153,7 +153,7 @@
     background-color: $color-default-white;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     background-color: $color-whisper;
   }
 }
@@ -180,7 +180,7 @@
     grid-column: 2;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     display: flex;
     max-width: none;
     margin: 0;
@@ -202,7 +202,7 @@
     grid-row: 4;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-column: 2;
     grid-row: 1 / 4;
   }

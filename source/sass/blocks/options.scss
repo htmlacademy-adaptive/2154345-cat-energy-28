@@ -1,21 +1,10 @@
-.options {
+.options__list {
   padding: 10px 20px;
 
-  @media (min-width: $vp-768) {
-    padding: 10px 30px;
-  }
-
-  @media (min-width: $vp-1440) {
-    padding: 82px 110px 10px 110px;
-  }
-}
-
-.options-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   margin: 0;
-  padding: 0;
 
   list-style-type: none;
 
@@ -23,25 +12,30 @@
 
   @media (min-width: $vp-768) {
     gap: 30px;
+    padding: 10px 30px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 80px;
+    gap: 6.56%;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 82px 0 10px 0;
   }
 }
 
-.options-list__item {
+.options__item {
   padding: 30px 20px 18px 20px;
 
   background-color: $color-white-smoke;
 
-  &:first-child .options-list__title::before {
+  &:first-child .options__title::before {
     background-image: url("../img/options/cat-slim.png");
   }
 
-  &:last-child .options-list__title::before {
+  &:last-child .options__title::before {
     left: -75px;
 
     width: 67px;
@@ -50,7 +44,7 @@
     background-image: url("../img/options/cat-fat.png");
   }
 
-  @media (min-width: $vp-768) and (max-width: $vp-1440) {
+  @media (min-width: $vp-768) and (max-width: $vp-1024) {
     position: relative;
 
     padding: 77px 316px 53px 52px;
@@ -79,12 +73,12 @@
     }
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     padding: 77px 52px 55px 52px;
   }
 }
 
-.options-list__title {
+.options__title {
   position: relative;
 
   margin: 0 0 29px 71px;
@@ -101,12 +95,12 @@
     line-height: 36px;
   }
 
-  @media (min-width: $vp-1440) {
+  @media (min-width: $vp-1024) {
     margin: 0 0 73px 162px;
   }
 }
 
-.options-list__title::before {
+.options__title::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -116,12 +110,12 @@
   width: 50px;
   height: 53px;
 
-  @media (min-width: $vp-768) and (max-width: $vp-1440) {
+  @media (min-width: $vp-768) and (max-width: $vp-1024) {
     content: none;
   }
 }
 
-.options-list__desc {
+.options__desc {
   position: relative;
 
   margin: 0 0 38px 0;
@@ -157,7 +151,7 @@
   }
 }
 
-.options-list__link {
+.options__link {
   position: relative;
 
   display: block;

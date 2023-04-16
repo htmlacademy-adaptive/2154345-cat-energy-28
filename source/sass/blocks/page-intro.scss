@@ -1,0 +1,19 @@
+.page-intro {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $vp-1024) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      width: 50%;
+      height: 100%;
+
+      background-color: $color-apple;
+    }
+  }
+}

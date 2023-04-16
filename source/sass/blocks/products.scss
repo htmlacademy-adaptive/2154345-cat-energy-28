@@ -17,6 +17,14 @@
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $vp-768) {
+    gap: 7.8%;
+  }
+
+  @media (min-width: $vp-1024) {
+    gap: 10.66%;
+  }
 }
 
 .products__item {
@@ -34,6 +42,18 @@
     height: 1px;
 
     background-color: $color-whisper;
+  }
+
+  @media (min-width: $vp-768) {
+    width: 46.1%;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $vp-1024) {
+    width: 17%;
   }
 
   &::after {

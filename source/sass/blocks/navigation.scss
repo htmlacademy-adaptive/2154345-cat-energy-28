@@ -154,7 +154,7 @@
 }
 
 //Поочередно выдвигает пункты бургерного меню(первый(i = 1) элемент примет положение top: 1 * 66px, второй(i = 2) top: 132px...
-.navigatoin__list--active {
+.navigation__list--active {
   @for $i from 1 through 3 {
     .navigation__item:nth-child(#{$i}) {
       top: #{$i * 66}px;
@@ -185,6 +185,7 @@
     width: auto;
     height: auto;
     padding: 0;
+    background-color: $color-transparent;
 
     border: none;
   }
@@ -211,6 +212,12 @@
   @media (min-width: $vp-1024) {
     font-size: 20px;
     line-height: 30px;
-    // color: $color-default-white;
+  }
+}
+
+// По макету необходим белый цвет шрифта только на главной странице при ширине экрана более 1024px
+.page-intro .navigation__link {
+  @media (min-width: $vp-1024) {
+    color: $color-default-white;
   }
 }

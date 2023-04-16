@@ -1,5 +1,14 @@
 .additionals {
-  padding: 25px 20px 35px 20px;
+  padding: 25px 0 0 0;
+}
+
+.additionals__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $vp-1024) {
+    flex-direction: row;
+  }
 }
 
 .additionals__title {
@@ -23,15 +32,17 @@
 .additionals__promo {
   position: relative;
 
-  display: inline-block;
+  display: block;
   margin: 0;
   padding: 187px 60px 43px 60px;
+  // width: 100%;
 
   font-size: 16px;
   line-height: 20px;
   font-family: $font-lato;
   text-align: center;
   color: $color-default-white;
+  background-color: $color-default-black;
 
   background-image: url("../img/promo/green-kitty.jpg");
   background-repeat: no-repeat;
@@ -46,7 +57,8 @@
     height: 80px;
 
     background-image: url("../img/promo/gift-icon.svg");
-    background-repeat: none;
+    background-repeat: no-repeat;
+    background-size: contain;
     transform: translateX(-50%);
   }
 }

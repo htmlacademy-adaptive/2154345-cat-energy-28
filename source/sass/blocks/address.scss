@@ -1,46 +1,87 @@
 .address__content {
   display: grid;
-  grid-template-columns: 139px 139px;
-  gap: 2px;
   padding: 26px 20px;
-  background-color: $color-white-smoke;
+
+  background-color: $color-default-white;
+
+  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $vp-768) {
+    padding: 56px 70px;
+
+    gap: none;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 .address__slogan {
   margin: 0;
+
+  font-style: normal;
   font-size: 16px;
   line-height: 20px;
-  font-style: normal;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .address__content-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: $font-lato;
+
   font-size: 14px;
   line-height: 20px;
+  font-family: $font-lato;
+
+  @media (min-width: $vp-768) {
+    min-width: 160px;
+
+    font-size: 16px;
+    text-align: right;
+
+    grid-column: 3;
+  }
 }
 
 .address__house {
   margin: 0;
+
   font-style: normal;
 }
 
 .address__city {
   margin: 0;
+
   font-style: normal;
 }
 
 .address__map {
   position: relative;
-  width: 320px;
+
+  width: 100%;
   height: 362px;
   padding: 0;
+
+  @media (min-width: $vp-768) {
+    height: 400px;
+  }
 }
 
 .address__map-image {
   position: absolute;
   z-index: -5;
+
+  display: block;
+  height: 100%;
+}
+
+.address__map-online {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

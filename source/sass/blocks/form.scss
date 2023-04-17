@@ -1,28 +1,34 @@
 .form__personal-info {
   position: relative;
+
   margin: 0;
   padding: 0 0 23px 0;
+
   border: none;
 
   &::after {
+    content: "";
     position: absolute;
+    right: -20px;
     bottom: -1px;
     left: -20px;
-    right: -20px;
+
     height: 1px;
+
     background-color: $color-gainsboro;
-    content: "";
   }
 }
 
 .form__input {
   display: grid;
-  grid-template-columns: max-content minmax(173px, 228px);
-  grid-template-rows: 45px;
-  gap: 13px;
+
   font-size: 16px;
   line-height: 18px;
   color: $color-charcoal;
+
+  gap: 13px;
+  grid-template-columns: max-content minmax(173px, 228px);
+  grid-template-rows: 45px;
 
   &:not(:last-child) {
     margin-bottom: 14px;
@@ -31,7 +37,8 @@
 
 .form__input-title {
   display: inline-block;
-  padding: 14px 0 13px;
+  padding: 14px 0 13px 0;
+
   text-transform: uppercase;
 }
 
@@ -39,43 +46,52 @@
   display: inline-block;
   margin: 0;
   padding: 0 20px;
-  font-family: $font-oswald;
+
   font-size: 16px;
   line-height: 19px;
+  font-family: $font-oswald;
   color: $color-charcoal;
+
   border: 1px solid $color-very-light-grey;
 }
 
 .form__programs {
   position: relative;
+
   margin: 0 0 26px 0;
-  padding: 22px 0 19px;
+  padding: 22px 0 19px 0;
+
   border: none;
 
   &::before {
+    content: "";
     position: absolute;
+    right: -20px;
     bottom: -1px;
     left: -20px;
-    right: -20px;
+
     height: 1px;
+
     background-color: $color-gainsboro;
-    content: "";
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 0;
-    left: -20px;
     right: -20px;
+    left: -20px;
+
     height: 1px;
+
     background-color: $color-gainsboro;
-    content: "";
   }
 }
 
 .form__owner-info {
   margin: 0 0 24px 0;
   padding: 0;
+
   border: none;
 
   .form__title {
@@ -86,6 +102,7 @@
 .form__title {
   display: block;
   margin: 0;
+
   font-size: 24px;
   line-height: 26px;
 }
@@ -93,6 +110,7 @@
 .form__comment {
   margin: 0 0 23px 0;
   padding: 0;
+
   border: none;
 
   .form__title {
@@ -105,29 +123,34 @@
   width: 100%;
   margin: 0;
   padding: 9px 12px 0 15px;
-  font-family: $font-oswald;
+
   font-size: 16px;
   line-height: 16px;
+  font-family: $font-oswald;
   text-transform: uppercase;
+
   border: 1px solid $color-very-light-grey;
+
   resize: none;
 }
 
 .form__additionals {
   margin: 0 0 34px 0;
   padding: 0;
+
   border: none;
 
   .form__title {
-    margin-bottom: 34px;
+    margin: 0 0 34px 0;
   }
 }
 
 .form__submit {
   display: block;
   width: 100%;
+  margin: 0 0 21px 0;
   padding: 7px;
-  margin-bottom: 21px;
+
   font-size: 16px;
   line-height: 20px;
 }
@@ -135,9 +158,10 @@
 .form__additional-info {
   display: block;
   margin: 0;
+
   font-size: 14px;
   line-height: 16px;
   font-family: $font-lato;
-  color: $color-default-black;
   text-align: center;
+  color: $color-default-black;
 }

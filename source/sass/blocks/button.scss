@@ -1,8 +1,9 @@
 .button {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color-default-white;
-  background-color: $color-apple;
   font-family: inherit;
+  color: $color-default-white;
+  text-transform: uppercase;
+
+  background-color: $color-apple;
   border: none;
+  cursor: pointer;
 }

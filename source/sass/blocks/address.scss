@@ -1,24 +1,54 @@
+.address {
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  @media (min-width: $vp-1280) {
+    padding: 95px 0 107px 0;
+  }
+}
+
 .address__content {
+  padding: 26px 0;
+
+  @media (min-width: $vp-768) {
+    padding: 56px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    width: 565px;
+    padding: 0;
+  }
+}
+
+.address__content-container {
   display: grid;
-  padding: 26px 20px;
+  max-width: 628px;
 
   background-color: $color-default-white;
 
-  gap: 2px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 139px 1fr 139px;
 
   @media (min-width: $vp-768) {
-    padding: 56px 70px;
+    max-width: none;
+    padding: 0 70px;
 
-    gap: none;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 172px 1fr 160px;
+  }
+
+  @media (min-width: $vp-1280) {
+    width: 565px;
+    max-width: none;
+    padding: 56px 60px 56px 80px;
+
+    grid-template-columns: 163px 1fr 175px;
   }
 }
 
 .address__slogan {
   margin: 0;
 
-  font-style: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -29,35 +59,35 @@
   }
 }
 
-.address__content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+.address__location {
   font-size: 14px;
   line-height: 20px;
   font-family: $font-lato;
+  color: $color-charcoal;
+
+  grid-column: 3;
 
   @media (min-width: $vp-768) {
-    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     font-size: 16px;
+    line-height: 20px;
     text-align: right;
+  }
 
-    grid-column: 3;
+  @media (min-width: $vp-1280) {
+    text-align: left;
   }
 }
 
-.address__house {
+.address__street {
   margin: 0;
-
-  font-style: normal;
 }
 
 .address__city {
   margin: 0;
-
-  font-style: normal;
 }
 
 .address__map {
@@ -70,9 +100,16 @@
   @media (min-width: $vp-768) {
     height: 400px;
   }
+
+  @media (min-width: $vp-1280) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
-.address__map-image {
+.adress__map-image {
   position: absolute;
   z-index: -5;
 

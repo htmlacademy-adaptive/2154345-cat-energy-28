@@ -1,7 +1,6 @@
 .features-list {
   display: grid;
   margin: 0;
-  padding: 0;
 
   list-style-type: none;
 }
@@ -9,4 +8,9 @@
 .features-list__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $vp-768) {
+    padding: 5px 0 9px 0;
+    border-bottom: 1px solid $color-very-light-grey;
+  }
 }

@@ -1,13 +1,25 @@
 .additionals {
+  position: relative;
+
   padding: 25px 0 0 0;
+
+  @media (min-width: $vp-1280) {
+    padding: 25px 0 86px 0;
+  }
 }
 
 .additionals__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
-  @media (min-width: $vp-1024) {
-    flex-direction: row;
+  gap: 35px;
+
+  @media (min-width: $vp-768) {
+    gap: 69px;
+  }
+
+  @media (min-width: $vp-1280) {
+    gap: 79px;
+    grid-template-columns: 1fr 245px;
   }
 }
 
@@ -17,16 +29,60 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    width: max-content;
+    margin: 0 0 81px -40px;
+    padding: 0 35px 0 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    background-color: $color-default-white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 49px;
+      left: 0;
+      z-index: -1;
+
+      width: 100vw;
+      height: 2px;
+
+      background-color: $color-apple;
+    }
+  }
 }
 
 .additionals__list {
   margin: 0;
+  padding: 0;
 
   list-style-type: none;
 }
 
 .additionals__item {
+  position: relative;
+
   padding: 13px 0 19px 0;
+
+  border-bottom: 1px solid $color-very-light-grey;
+
+  &:first-child {
+    border-top: 1px solid $color-very-light-grey;
+  }
+
+  @media (min-width: $vp-768) and (max-width: $vp-1280) {
+    padding: 26px 38px 28px 38px;
+
+    border: 1px solid $color-very-light-grey;
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 15px 0 17px 0;
+  }
 }
 
 .additionals__promo {
@@ -34,18 +90,18 @@
 
   display: block;
   margin: 0;
-  padding: 187px 60px 43px 60px;
-  // width: 100%;
+  padding: 187px 21.4% 43px 21.4%;
 
   font-size: 16px;
   line-height: 20px;
   font-family: $font-lato;
   text-align: center;
   color: $color-default-white;
-  background-color: $color-default-black;
 
+  background-color: $color-default-black;
   background-image: url("../img/promo/green-kitty.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 
   &::before {
     content: "";
@@ -60,5 +116,19 @@
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateX(-50%);
+  }
+
+  @media (min-width: $vp-768) and (max-width: $vp-1280) {
+    padding: 71px 124px 69px 422px;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 77px;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 185px 43px 42px 41px;
   }
 }

@@ -8,7 +8,13 @@
     padding: 0 30px;
   }
 
-  @media (min-width: $vp-1024) {
-    padding: 0 40px;
+  @media (min-width: $vp-1280) {
+    padding: 0 110px;
+  }
+}
+
+.form-container .container {
+  @media (min-width: $vp-768) {
+    padding: 0 70px;
   }
 }

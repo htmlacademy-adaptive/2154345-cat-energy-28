@@ -80,6 +80,10 @@
   height: 26px;
 
   background-image: url("../img/cat-form/tick.svg");
+
+  @media (min-width: $vp-768) {
+    background-image: url("../img/cat-form/tick--big.svg");
+  }
 }
 
 .controls-list__sign--radio {

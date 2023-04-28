@@ -38,7 +38,7 @@
     padding: 20px 0;
 
     &::after {
-      content: none;
+      display: none;
     }
   }
 
@@ -79,10 +79,6 @@
 .form__owner-input {
   position: relative;
 
-  @media (min-width: $vp-768) {
-    margin: 0;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -98,6 +94,10 @@
 
   &:last-child::after {
     background-image: url("../img/cat-form/phone-icon.svg");
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0;
   }
 }
 
@@ -122,7 +122,7 @@
   border: 1px solid $color-very-light-grey;
 
   @media (min-width: $vp-768) {
-    padding: 11px 20px;
+    padding: 10px 20px;
 
     font-size: 20px;
     line-height: 30px;
@@ -169,7 +169,7 @@
 
     &::before,
     &::after {
-      content: none;
+      display: none;
     }
   }
 
@@ -183,6 +183,7 @@
 
   margin: 0 0 24px 0;
   padding: 0;
+  overflow: hidden;
 
   border: none;
 
@@ -208,17 +209,15 @@
 }
 
 .form__owner-info-wrapper {
-  .form__owner-input {
-    @media (min-width: $vp-768) {
-      margin: 0;
-    }
-  }
-
   @media (min-width: $vp-1280) {
     display: grid;
 
     gap: 60px;
     grid-template-columns: 1fr 1fr;
+
+    .form__owner-input {
+      margin: 0;
+    }
   }
 }
 
@@ -258,6 +257,7 @@
 
   margin: 0 0 23px 0;
   padding: 0;
+  overflow: hidden;
 
   border: none;
 
@@ -310,6 +310,7 @@
 
   margin: 0 0 34px 0;
   padding: 0;
+  overflow: hidden;
 
   border: none;
 

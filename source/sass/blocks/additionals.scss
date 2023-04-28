@@ -2,6 +2,7 @@
   position: relative;
 
   padding: 25px 0 0 0;
+  overflow: hidden;
 
   @media (min-width: $vp-1280) {
     padding: 25px 0 86px 0;
@@ -23,6 +24,18 @@
   }
 }
 
+.additionals__list-wrapper {
+  padding: 0 0 35px 0;
+
+  @media (min-width: $vp-768) {
+    padding: 0 0 76px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 0;
+  }
+}
+
 .additionals__title {
   margin: 0 0 36px 0;
 
@@ -33,7 +46,7 @@
   @media (min-width: $vp-768) {
     display: block;
     width: max-content;
-    margin: 0 0 81px -40px;
+    margin: 0 0 81px 0;
     padding: 0 35px 0 40px;
 
     font-size: 36px;
@@ -57,10 +70,18 @@
 }
 
 .additionals__list {
-  margin: 0;
+  margin: 0 0 35px 0;
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 69px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0;
+  }
 }
 
 .additionals__item {
@@ -123,8 +144,9 @@
 
     &::before {
       top: 50%;
-      transform: translateY(-50%);
       left: 77px;
+
+      transform: translateY(-50%);
     }
   }
 

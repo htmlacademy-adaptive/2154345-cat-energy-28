@@ -9,113 +9,12 @@
   width: 24px;
   right: 25px;
 
-  // position: relative;
-  // z-index: 5;
-
-  // width: 24px;
-  // height: 16px;
-  // margin: 0;
-  // padding: 0;
-
-  // background-color: $color-transparent;
-  // border: none;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -0.1px;
-  //   right: 0;
-  //   left: 0;
-
-  //   height: 1.5px;
-
-  //   background-color: $color-default-black;
-
-  //   transition: all 1s ease 0s;
-  // }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-
-  //   width: 24px;
-  //   height: 1.5px;
-
-  //   background-color: $color-default-black;
-
-  //   transition: all 1s ease 0s;
-  // }
-
   @media (min-width: $vp-768) {
     display: none;
   }
 }
 
-// .navigation__toggle--active {
-//   &::before {
-//     transform-origin: center;
-
-//     animation-name: burger-top;
-//     animation-duration: 1s;
-//     animation-direction: alternate;
-
-//     animation-fill-mode: forwards;
-//   }
-
-//   &::after {
-//     transform-origin: center;
-
-//     animation-name: burger-bottom;
-//     animation-duration: 1s;
-//     animation-direction: alternate;
-
-//     animation-fill-mode: forwards;
-//   }
-
-//   .navigation__toogle-elem {
-//     transform: scale(0);
-//   }
-// }
-
-// @keyframes burger-top {
-//   0% {
-//     top: 0;
-//   }
-
-//   50% {
-//     top: 7px;
-//   }
-
-//   60% {
-//     rotate: 1deg;
-//   }
-
-//   100% {
-//     rotate: 44deg;
-//   }
-// }
-
-// @keyframes burger-bottom {
-//   0% {
-//     bottom: 0;
-//   }
-
-//   50% {
-//     bottom: 7.5px;
-//   }
-
-//   60% {
-//     rotate: -1deg;
-//   }
-
-//   100% {
-//     rotate: -44deg;
-//   }
-// }
-
-.navigation__toogle-elem {
+.navigation__toggle-elem {
   display: block;
   width: 100%;
   border-radius: 3px;
@@ -124,45 +23,33 @@
   transition: all 0.3s;
   position: relative;
 
-  & + .navigation__toogle-elem {
+  & + .navigation__toggle-elem {
     margin: 3px 0 0 0;
   }
-
-  // content: "";
-  // position: absolute;
-  // right: 0;
-  // bottom: 7.5px;
-  // left: 0;
-
-  // height: 1.5px;
-
-  // background-color: $color-default-black;
-
-  // transition: all 1s ease 0s;
 }
 
 .navigation__toggle--active .navigation__toggle-elem:nth-child(1) {
-  animation: ease 0.7s top forwards;
+  animation: ease 0.5s top forwards;
 }
 
 .navigation__toggle--not-active .navigation__toggle-elem:nth-child(1) {
-  animation: ease 0.7s top-2 forwards;
+  animation: ease 0.5s top-2 forwards;
 }
 
 .navigation__toggle--active .navigation__toggle-elem:nth-child(2) {
-  animation: ease 0.7s scaled forwards;
+  animation: ease 0.5s scaled forwards;
 }
 
 .navigation__toggle--not-active .navigation__toggle-elem:nth-child(2) {
-  animation: ease 0.7s scaled-2 forwards;
+  animation: ease 0.5s scaled-2 forwards;
 }
 
 .navigation__toggle--active .navigation__toggle-elem:nth-child(3) {
-  animation: ease 0.7s bottom forwards;
+  animation: ease 0.5s bottom forwards;
 }
 
 .navigation__toggle--not-active .navigation__toggle-elem:nth-child(3) {
-  animation: ease 0.7s bottom-2 forwards;
+  animation: ease 0.5s bottom-2 forwards;
 }
 
 .navigation__list {

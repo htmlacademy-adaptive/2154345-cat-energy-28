@@ -1,34 +1,147 @@
 .card {
+  position: relative;
+
   display: grid;
+  width: 100%;
   padding: 19px 0 25px 0;
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
   row-gap: 13px;
 
+  // Декоративные линии на мобилках
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    left: -20px;
+
+    height: 1px;
+
+    background-color: $color-whisper;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -1px;
+    left: -20px;
+
+    height: 1px;
+
+    background-color: $color-whisper;
+  }
+
   @media (min-width: $vp-768) {
-    width: 100%;
     padding: 39px 36px;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     row-gap: 0;
+
+    // ::before становится подложкой для карточки, а ::after исчезает
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      left: 0;
+      z-index: -1;
+
+      height: 430px;
+
+      background-color: $color-white-smoke;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
-.card--last-child {
-  grid-template-columns: 1fr;
+.card--more-button {
+  padding: 78px 0 25px 0;
 
-  .card__link {
+  text-align: center;
+
+  gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+
+  .card__title {
+    max-width: 220px;
+    padding: 0 0 8px 0;
+
+    grid-column: 1;
     grid-row: 1;
   }
 
-  .card__title {
-    grid-column: 1;
+  .card__slogan {
+    max-width: 220px;
+    margin: 0;
+    padding: 0 0 21px 0;
+
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-lato;
+
+    grid-row: 2;
   }
 
   .card__order-button {
+    color: $color-charcoal;
+
+    background-color: $color-white-smoke;
+
     grid-row: 3;
+    justify-self: stretch;
+  }
+
+  .card__plus {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    background-image: url("../img/card/plus.svg");
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    display: none;
+  }
+
+  @media (min-width: $vp-768) {
+    align-self: flex-end;
+    padding: 161px 36px 39px 36px;
+
+    border: 2px solid $color-white-smoke;
+
+    .card__plus {
+      top: 52px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/card/plus--big.svg");
+    }
+
+    .card__title {
+      padding: 0 0 23px 0;
+    }
+
+    .card__slogan {
+      padding: 0 0 87px 0;
+
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 

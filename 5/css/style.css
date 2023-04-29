@@ -157,6 +157,12 @@ a {
   }
 }
 
+@media (min-width: 1280px) {
+  .address .container {
+    pointer-events: none;
+  }
+}
+
 .page-header {
   position: relative;
   z-index: 0;
@@ -2094,6 +2100,7 @@ a {
     padding: 56px 60px 56px 80px;
     background-color: #ffffff;
     grid-template-columns: 163px 1fr 175px;
+    pointer-events: all;
   }
 }
 

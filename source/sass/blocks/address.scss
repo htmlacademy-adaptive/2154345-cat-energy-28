@@ -48,6 +48,7 @@
     background-color: $color-default-white;
 
     grid-template-columns: 163px 1fr 175px;
+    pointer-events: all;
   }
 }
 

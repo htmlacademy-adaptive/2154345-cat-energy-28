@@ -36,6 +36,7 @@
 
   @media (min-width: $vp-768) {
     padding: 39px 36px;
+    min-height: 429px;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
@@ -45,12 +46,13 @@
     &::before {
       content: "";
       position: absolute;
-      right: 0;
-      bottom: -3px;
+      top: auto;
+      bottom: 0;
       left: 0;
       z-index: -1;
 
-      height: 430px;
+      width: 100%;
+      height: calc(100% - 81px);
 
       background-color: $color-white-smoke;
     }
@@ -58,6 +60,10 @@
     &::after {
       display: none;
     }
+  }
+
+  @media (min-width: $vp-1280) {
+    min-height: 431px;
   }
 }
 
@@ -122,6 +128,7 @@
     padding: 161px 36px 39px 36px;
 
     border: 2px solid $color-white-smoke;
+    height: calc(100% - 81px);
 
     .card__plus {
       top: 52px;
@@ -142,6 +149,10 @@
       font-size: 16px;
       line-height: 18px;
     }
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 160px 38px 41px 38px;
   }
 }
 

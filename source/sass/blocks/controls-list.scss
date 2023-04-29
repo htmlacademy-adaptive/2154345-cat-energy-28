@@ -5,6 +5,25 @@
   list-style-type: none;
 }
 
+.controls-list--checkboxes {
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 32px;
+
+    .controls-list__item:not(:last-child) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
 .controls-list__item {
   &:not(:last-child) {
     margin-bottom: 13px;
@@ -18,6 +37,11 @@
   gap: 15px;
   grid-template-columns: 30px auto;
   grid-template-rows: 30px;
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 40px auto;
+    grid-template-rows: 40px;
+  }
 }
 
 .controls-list__sign {
@@ -44,6 +68,11 @@
 
   background-color: $color-apple;
   border-radius: 50%;
+
+  @media (min-width: $vp-768) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .controls-list__input:checked + .controls-list__sign--checkbox::before {
@@ -51,6 +80,10 @@
   height: 26px;
 
   background-image: url("../img/cat-form/tick.svg");
+
+  @media (min-width: $vp-768) {
+    background-image: url("../img/cat-form/tick--big.svg");
+  }
 }
 
 .controls-list__sign--radio {
@@ -66,4 +99,9 @@
   text-transform: uppercase;
 
   grid-column: 2;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

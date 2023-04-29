@@ -16,12 +16,14 @@
             <img class="page-header__logo" src="img/header/logo--mobile.png" alt="">
           </a>
           <nav class="navigation page-header__navigation">
-            <button class="navigation__toggle">
-              <span class="navigation__toogle-elem"></span>
-            </button>
+            <div class="navigation__toggle navigation__toggle--not-active">
+              <span class="navigation__toggle-elem"></span>
+              <span class="navigation__toggle-elem"></span>
+              <span class="navigation__toggle-elem"></span>
+            </div>
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Главная</a>
+                <a class="navigation__link navigation__link--current" href="#">Главная</a>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -37,10 +39,12 @@
 
       <section class="hero">
         <div class="hero__container container">
-          <h1 class="hero__title">Функциональное питание для котов</h1>
-          <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <a class="hero__link button" href="form.html">Подобрать программу</a>
+          <div class="hero__heading">
+            <h1 class="hero__title">Функциональное питание для котов</h1>
+            <p class="hero__slogan">Занялся собой? Займись котом!</p>
+          </div>
           <img class="hero__image" src="img/hero/cat-energy.png" alt="Изображение продукта Cat Energy">
+          <a class="hero__link button" href="form.html">Подобрать программу</a>
         </div>
       </section>
 
@@ -51,7 +55,7 @@
         <div class="options__container container">
           <h2 class="visually-hidden">Возможные программы питания вашего кота.</h2>
           <ul class="options__list">
-            <li class="options__item">
+            <li class="options__item options__item--slim">
               <h3 class="options__title">Похудение</h3>
               <p class="options__desc">
                 Ваш кот весит больше собаки и почти утратил способность
@@ -60,7 +64,7 @@
               </p>
               <a class="options__link" href="#">Каталог slim</a>
             </li>
-            <li class="options__item">
+            <li class="options__item options__item--fat">
               <h3 class="options__title">Набор массы</h3>
               <p class="options__desc">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat
@@ -91,9 +95,9 @@
         </div>
       </section>
       <section class="example">
-        <div class="example__wrapper container">
+        <div class="container">
           <h2 class="example__title">Живой пример</h2>
-          <div class="example__item">
+          <div class="example__wrapper">
             <p class="example__desc">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
               Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не
@@ -116,27 +120,31 @@
             <div class="example__slider slider">
               <img class="slider__photo slider__photo--sublay" src="img/example/fat-kitty.png" alt="Большой кот" width="280" height="256">
               <img class="slider__photo slider__photo--overlay" src="img/example/slim-kitty.png" alt="Стройный кот" width="280" height="256">
-              <input class="slider__control" type="range" min="0" max="100" oninput="slide()">
+              <input class="slider__control" type="range" min="0" max="100">
             </div>
           </div>
           <script src="js/app.js"></script>
         </div>
       </section>
+
       <section class="address">
         <h2 class="visually-hidden">Наш адрес.</h2>
-        <address class="address__content container">
-          <p class="address__slogan">Приглашаем<br>к сотрудничеству дилеров!</p>
-          <div class="address__content-container">
-            <p class="address__house">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="address__city">Санкт-Петербург</p>
+        <div class="container">
+          <div class="address__content">
+            <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+            <div class="address__location">
+              <p class="address__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="address__city">Санкт-Петербург</p>
+            </div>
           </div>
-        </address>
+        </div>
         <div class="address__map">
-          <img class="address__map-image" src="img/map/map-image.png" alt="Город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
+          <img class="adress__map-image" src="img/map/map-image.png" alt="Город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
           <iframe class="address__map-online" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728594!2d30.32047247735502!3d59.93871647491513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1681478045813!5m2!1sru!2sru"
-          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
+
     </main>
 
     <footer class="page-footer">

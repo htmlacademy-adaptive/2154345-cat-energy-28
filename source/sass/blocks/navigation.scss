@@ -4,124 +4,52 @@
 }
 
 .navigation__toggle {
-  position: relative;
-  z-index: 10;
-
+  z-index: 5;
+  position: absolute;
   width: 24px;
-  height: 16px;
-  margin: 0;
-  padding: 0;
-
-  background-color: $color-transparent;
-  border: none;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -0.1px;
-    right: 0;
-    left: 0;
-
-    height: 1.5px;
-
-    background-color: $color-default-black;
-
-    transition: all 1s ease 0s;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 24px;
-    height: 1.5px;
-
-    background-color: $color-default-black;
-
-    transition: all 1s ease 0s;
-  }
+  right: 25px;
 
   @media (min-width: $vp-768) {
     display: none;
   }
 }
 
-.navigation__toggle--active {
-  &::before {
-    transform-origin: center;
+.navigation__toggle-elem {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  height: 2px;
+  background: $color-default-black;
+  transition: all 0.3s;
+  position: relative;
 
-    animation-name: burger-top;
-    animation-duration: 1s;
-    animation-direction: alternate;
-
-    animation-fill-mode: forwards;
-  }
-
-  &::after {
-    transform-origin: center;
-
-    animation-name: burger-bottom;
-    animation-duration: 1s;
-    animation-direction: alternate;
-
-    animation-fill-mode: forwards;
-  }
-
-  .navigation__toogle-elem {
-    transform: scale(0);
+  & + .navigation__toggle-elem {
+    margin: 3px 0 0 0;
   }
 }
 
-@keyframes burger-top {
-  0% {
-    top: 0;
-  }
-
-  50% {
-    top: 7px;
-  }
-
-  60% {
-    rotate: 1deg;
-  }
-
-  100% {
-    rotate: 44deg;
-  }
+.navigation__toggle--active .navigation__toggle-elem:nth-child(1) {
+  animation: ease 0.5s top forwards;
 }
 
-@keyframes burger-bottom {
-  0% {
-    bottom: 0;
-  }
-
-  50% {
-    bottom: 7.5px;
-  }
-
-  60% {
-    rotate: -1deg;
-  }
-
-  100% {
-    rotate: -44deg;
-  }
+.navigation__toggle--not-active .navigation__toggle-elem:nth-child(1) {
+  animation: ease 0.5s top-2 forwards;
 }
 
-.navigation__toogle-elem {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 7.5px;
-  left: 0;
+.navigation__toggle--active .navigation__toggle-elem:nth-child(2) {
+  animation: ease 0.5s scaled forwards;
+}
 
-  height: 1.5px;
+.navigation__toggle--not-active .navigation__toggle-elem:nth-child(2) {
+  animation: ease 0.5s scaled-2 forwards;
+}
 
-  background-color: $color-default-black;
+.navigation__toggle--active .navigation__toggle-elem:nth-child(3) {
+  animation: ease 0.5s bottom forwards;
+}
 
-  transition: all 1s ease 0s;
+.navigation__toggle--not-active .navigation__toggle-elem:nth-child(3) {
+  animation: ease 0.5s bottom-2 forwards;
 }
 
 .navigation__list {
@@ -131,7 +59,6 @@
 
   display: block;
   width: 100%;
-  height: 66px * 4;
   margin: 0;
   padding: 0;
 
@@ -146,9 +73,10 @@
     align-self: flex-end;
     min-width: 440px;
     height: auto;
+    z-index: 5;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     min-width: 478px;
   }
 }
@@ -166,18 +94,17 @@
   position: absolute;
   top: -200px;
   left: 0;
-  z-index: 5;
+  z-index: 1;
 
   display: block;
   width: 100%;
-  height: 66px;
   padding: 22px 10px 24px 10px;
 
   background-color: $color-default-white;
   border-top: 1px solid $color-whisper;
   border-bottom: 1px solid $color-whisper;
 
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
 
   @media (min-width: $vp-768) {
     position: static;
@@ -192,6 +119,9 @@
 }
 
 .navigation__link {
+  position: relative;
+
+
   display: block;
   margin: 0;
 
@@ -202,22 +132,38 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
-    padding: 10px 0;
+    padding: 17px 0 10px 0;
 
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     font-size: 20px;
     line-height: 30px;
   }
 }
 
+.navigation__link--current::after {
+  @media (min-width: $vp-768) {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-apple;
+  }
+}
+
 // По макету необходим белый цвет шрифта только на главной странице при ширине экрана более 1024px
 .page-intro .navigation__link {
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     color: $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 }

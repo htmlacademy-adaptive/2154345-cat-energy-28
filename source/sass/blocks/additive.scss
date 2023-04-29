@@ -1,19 +1,69 @@
+.additive {
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 60px;
+    row-gap: 23px;
+  }
+
+  @media (min-width: $vp-1280) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    gap: 80px;
+    align-items: center;
+  }
+}
+
 .additive__title {
-  margin: 0;
+  margin: 0 0 13px 0;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additive__feature {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+
   font-size: 14px;
   line-height: 14px;
   font-family: $font-lato;
   color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+  }
 }
 
-.additive__order {
+.additive__order-button {
   width: 100%;
+  padding: 10px 0;
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 8px 26px;
+    width: 244px;
+    justify-self: end;
+    grid-column: 3;
+  }
 }

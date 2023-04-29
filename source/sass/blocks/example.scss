@@ -1,13 +1,28 @@
 .example {
+  position: relative;
   padding: 25px 0 40px 0;
-  background-color: $color-whisper;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: $color-whisper;
+    z-index: -1;
+
+    @media (min-width: $vp-768) {
+      height: 462px;
+    }
+  }
 
   @media (min-width: $vp-768) {
     padding: 43px 0 100px 0;
-    background-color: $color-default-white;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     padding: 59px 0 0 0;
   }
 }
@@ -29,30 +44,26 @@
     line-height: 60px;
   }
 
-  @media (min-width: $vp-1024) {
-    margin: 0;
-    padding: 0 0 76px 0;
+  @media (min-width: $vp-1280) {
+    margin: 0 0 76px 0;
   }
 }
 
-.example__item {
+.example__wrapper {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, min-content);
 
   @media (min-width: $vp-768) {
-    background-color: $color-default-white;
-
     grid-template-columns: 51.7% 1fr;
     grid-template-rows: repeat(3, min-content);
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     padding: 70px 0 75px 0;
 
-    background-color: $color-whisper;
-    grid-template-columns: 34.8% 1fr;
+    grid-template-columns: 436px 1fr;
   }
 }
 
@@ -74,7 +85,8 @@
     line-height: 24px;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
+    margin: 0 0 69px 0;
     grid-column: 1;
   }
 }
@@ -97,7 +109,7 @@
     grid-column: 1;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     width: 84%;
   }
 }
@@ -153,7 +165,7 @@
     background-color: $color-default-white;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     background-color: $color-whisper;
   }
 }
@@ -180,7 +192,7 @@
     grid-column: 2;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     display: flex;
     max-width: none;
     margin: 0;
@@ -197,12 +209,11 @@
   grid-row: 5;
 
   @media (min-width: $vp-768) {
-    background-color: $color-whisper;
 
     grid-row: 4;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1280) {
     grid-column: 2;
     grid-row: 1 / 4;
   }

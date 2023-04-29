@@ -42,7 +42,7 @@
     background-color: $color-gainsboro;
 
     @media (min-width: $vp-768) {
-      content: none;
+      display: none;
     }
   }
 

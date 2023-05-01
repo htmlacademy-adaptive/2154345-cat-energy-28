@@ -13,10 +13,13 @@
       width: 50%;
       height: 100%;
 
-      background-image: url("../../img/hero/kitty-big.jpg");
+      background-image: url("../img/hero/kitty-big.jpg");
       background-repeat: no-repeat;
-      background-position: center;
       background-size: cover;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/hero/kitty-big@2x.jpg");
+      }
     }
 
     &::after {

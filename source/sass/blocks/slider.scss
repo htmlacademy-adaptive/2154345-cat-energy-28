@@ -1,8 +1,11 @@
 .slider {
-  position: relative;
 
   display: block;
   width: 280px;
+
+  @media (min-width: $vp-768) {
+    width: 560px;
+  }
 }
 
 .slider__photo {
@@ -39,5 +42,11 @@
     background-image: url("../img/example/curtain.png");
 
     appearance: none;
+
+    @media (min-width: $vp-768) {
+      height: 512px;
+
+      background-image: url("../img/example/curtain--big.png");
+    }
   }
 }

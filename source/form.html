@@ -16,7 +16,14 @@
     <header class="page-header">
       <div class="page-header__wrapper container">
         <a class="page-header__link" href="index.html">
-          <img class="page-header__logo" src="img/header/logo--mobile.png" alt="" width="191" height="38">
+          <picture>
+            <source media="(min-width: 1280px)"
+              srcset="img/header/logo--desktop@1x.png 1x, img/header/logo--desktop@2x.png 2x" width="202" height="59">
+            <source media="(min-width: 768px)"
+              srcset="img/header/logo--tablet@1x.png 1x, img/header/logo--tablet@2x.png 2x" width="174" height="52">
+            <img class="page-header__logo" src="img/header/logo--mobile@1x.png"
+              srcset="img/header/logo--mobile@2x.png 2x" alt="Логотип Cat Energy" width="191" height="38">
+          </picture>
         </a>
         <nav class="navigation page-header__navigation">
           <div class="navigation__toggle navigation__toggle--not-active">
@@ -185,7 +192,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__link page-footer__element" href="index.html">
-          <img class="page-footer__logo" src="img/footer/logo.png" alt="" width="128" height="24">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/footer/logo--big@1x.png 1x img/footer/logo--big@2x.png 2x">
+            <img class="page-footer__logo" src="img/footer/logo@1x.png"
+              srcset="img/footer/logo@2x.png" alt="" width="128" height="24">
+          </picture>
         </a>
         <div class="page-footer__element page-footer__social-list-container">
           <ul class="page-footer__social-list">

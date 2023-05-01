@@ -47,4 +47,14 @@
 
 .page-header__logo {
   display: block;
+
+  @media (min-width: $vp-768) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $vp-1280) {
+    width: 202px;
+    height: 59px;
+  }
 }

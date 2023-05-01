@@ -35,17 +35,15 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 39px 36px;
+    padding: 0  36px 39px 36px;
     min-height: 429px;
 
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 1fr repeat(4, min-content);
     row-gap: 0;
 
     // ::before становится подложкой для карточки, а ::after исчезает
     &::before {
-      content: "";
-      position: absolute;
       top: auto;
       bottom: 0;
       left: 0;
@@ -60,10 +58,27 @@
     &::after {
       display: none;
     }
+
+    .card__image-link {
+      grid-row: 2;
+    }
+
+    .card__title {
+      grid-row: 3;
+    }
+
+    .card__features-list {
+      grid-row: 4;
+    }
+
+    .card__order-button {
+      grid-row: 5;
+    }
   }
 
   @media (min-width: $vp-1280) {
     min-height: 431px;
+    padding: 0 30px 40px 35px;
   }
 }
 
@@ -200,6 +215,10 @@
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
+  }
+
+  @media (min-width: $vp-1280) {
+    line-height: 21px;
   }
 }
 

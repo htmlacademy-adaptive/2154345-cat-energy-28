@@ -130,7 +130,8 @@
     width: 30px;
     height: 30px;
 
-    background-image: url("../img/card/plus.svg");
+    mask-image: url("../img/sprite.svg#plus");
+    background-color: $color-light-gray;
     transform: translateX(-50%);
   }
 
@@ -151,7 +152,7 @@
       width: 60px;
       height: 60px;
 
-      background-image: url("../img/card/plus--big.svg");
+      background-image: url("../img/sprite.svg#card--plus");
     }
 
     .card__title {

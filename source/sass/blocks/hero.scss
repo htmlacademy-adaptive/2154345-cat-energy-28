@@ -57,7 +57,7 @@
     width: calc(100% + 40px);
     height: calc(100% + 150px);
 
-    background-color: $color-apple-transparent;
+    background-color: rgba($color-apple, 0.85);
 
     @media (min-width: $vp-768) {
       display: none;

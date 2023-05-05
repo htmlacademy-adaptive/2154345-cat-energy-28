@@ -83,22 +83,75 @@
 
     width: 60px;
     height: 60px;
+
+    @media (min-width: $vp-768) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--leaf::before {
-    background-image: url("../img/benefits/leaf.png");
+    background-image: url("../img/benefits/leaf@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/benefits/leaf@2x.png");
+    }
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/benefits/leaf--big@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/benefits/leaf--big@2x.png");
+      }
+    }
   }
 
   &--boiling-water::before {
-    background-image: url("../img/benefits/boiling-water.png");
+    background-image: url("../img/benefits/boiling-water@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/benefits/boiling-water@2x.png");
+    }
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/benefits/boiling-water--big@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/benefits/boiling-water--big@2x.png");
+      }
+    }
   }
 
   &--eat::before {
-    background-image: url("../img/benefits/eat.png");
+    background-image: url("../img/benefits/eat@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/benefits/eat@2x.png");
+    }
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/benefits/eat--big@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/benefits/eat--big@2x.png");
+      }
+    }
   }
 
   &--clock::before {
-    background-image: url("../img/benefits/clock.png");
+    background-image: url("../img/benefits/clock@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/benefits/clock@2x.png");
+    }
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/benefits/clock--big@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/benefits/clock--big@2x.png");
+      }
+    }
   }
 
   @media (min-width: $vp-768) {

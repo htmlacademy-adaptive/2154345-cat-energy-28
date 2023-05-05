@@ -48,6 +48,15 @@
   }
 }
 
+.form__owner-input {
+  position: relative;
+  z-index: 0;
+
+  @media (min-width: $vp-1280) {
+    margin: 0;
+  }
+}
+
 .form__input {
   display: grid;
   align-items: center;
@@ -64,6 +73,31 @@
     margin-bottom: 14px;
   }
 
+  &:hover {
+    .form__input-field {
+      border-color: $color-very-light-grey;
+    }
+  }
+
+  .form__input-field:focus {
+    outline: none;
+    border: 2px solid $color-default-black;
+
+    & + .form__input-sign {
+      background-color: $color-apple;
+    }
+  }
+
+  &--error {
+    .form__input-field {
+      border: 2px solid $color-light-coral;
+    }
+
+    .form__input-sign {
+      background-color: $color-light-coral;
+    }
+  }
+
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 30px;
@@ -76,28 +110,23 @@
   }
 }
 
-.form__owner-input {
-  position: relative;
+.form__input-sign {
+  position: absolute;
+  top: 50%;
+  right: 15px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 15px;
+  width: 20px;
+  height: 20px;
 
-    width: 20px;
-    height: 20px;
+  background-color: $color-default-black;
+  transform: translateY(-50%);
 
-    background-image: url("../img/cat-form/email-icon.svg");
-    transform: translateY(-50%);
-  }
+  mask-image: url("../img/sprite.svg#email-icon");
+}
 
-  &:last-child::after {
-    background-image: url("../img/cat-form/phone-icon.svg");
-  }
-
-  @media (min-width: $vp-1280) {
-    margin: 0;
+.form__owner-input:nth-child(2) {
+  .form__input-sign {
+    mask-image: url("../img/sprite.svg#phone-icon");
   }
 }
 
@@ -119,7 +148,14 @@
   font-family: $font-oswald;
   color: $color-charcoal;
 
-  border: 1px solid $color-very-light-grey;
+  border: 1px solid $color-whisper;
+  border-radius: 0;
+
+  &:focus,
+  &:focus-visible {
+    border-color: #00ff00;
+    border-radius: 0;
+  }
 
   @media (min-width: $vp-768) {
     padding: 10px 20px;

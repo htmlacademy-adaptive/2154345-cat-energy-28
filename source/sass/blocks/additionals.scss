@@ -115,9 +115,7 @@
   text-align: center;
   color: $color-default-white;
 
-  background-color: $color-apple-transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba($color-apple, 0.85);
 
   &::before {
     content: "";
@@ -128,10 +126,18 @@
     width: 78px;
     height: 80px;
 
-    background-image: url("../img/promo/gift-icon.svg");
+    mask-image: url("../img/sprite.svg#gift-icon");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateX(-50%);
+    background-color: $color-default-white;
+
+    @media (min-width: $vp-768) {
+      width: 80px;
+      height: 83px;
+
+      mask-image: url("../img/sprite.svg#gift-icon--big");
+    }
   }
 
   &::after {
@@ -145,10 +151,10 @@
     background-image: url("../img/promo/promo-kitty@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/promo/promo-kitty@2x.jpg");
-      background-size: 100%;
     }
   }
 
@@ -167,7 +173,6 @@
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/promo/promo-kitty--big@2x.jpg");
-        background-size: 100%;
       }
     }
   }

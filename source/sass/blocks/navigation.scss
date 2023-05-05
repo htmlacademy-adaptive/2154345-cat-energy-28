@@ -8,6 +8,7 @@
   position: absolute;
   width: 24px;
   right: 25px;
+  cursor: pointer;
 
   @media (min-width: $vp-768) {
     display: none;

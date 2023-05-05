@@ -1,10 +1,42 @@
 .slider {
+  position: relative;
 
   display: block;
   width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  grid-column: 1 / -1;
+  grid-row: 4;
 
   @media (min-width: $vp-768) {
     width: 560px;
+    height: 512px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: 200vw;
+      height: calc(100% - 151px);
+
+      background-color: $color-whisper;
+      transform: translateX(-50%);
+
+      @media (min-width: $vp-1280) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    position: absolute;
+    right: 0;
+    bottom: 85px;
+
+    padding: 0;
   }
 }
 
@@ -25,28 +57,109 @@
 
 .slider__control {
   position: relative;
+  z-index: 1;
 
   width: calc(100% + 40px);
+  height: 100%;
   margin: 0 0 0 -20px;
 
   background-color: $color-transparent;
   outline: none;
-  cursor: pointer;
+  cursor: default;
 
   appearance: none;
 
   &::-webkit-slider-thumb {
-    width: 40px;
+    width: 1px;
     height: 256px;
-
-    background-image: url("../img/example/curtain.png");
 
     appearance: none;
 
     @media (min-width: $vp-768) {
       height: 512px;
+    }
+  }
 
-      background-image: url("../img/example/curtain--big.png");
+  &::-moz-range-thumb {
+    width: 0;
+
+    border: none;
+
+    appearance: none;
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-color: $color-default-white;
+  border: 3px solid $color-dim-gray;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  // pointer-events: none;
+  transform-style: preserve-3d;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 50%;
+
+    width: 4px;
+    height: 256px;
+    cursor: pointer;
+
+    background-color: $color-dim-gray;
+    border-radius: 2px;
+    transform: translateX(-50%) translateZ(-10px);
+
+    @media (min-width: $vp-768) {
+      top: -236px;
+
+      height: 512px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24px;
+    height: 18px;
+    mask-image: url("../img/sprite.svg#arrows");
+    background-color: $color-dim-gray;
+
+    @media (min-width: $vp-768) {
+      mask-image: url("../img/sprite.svg#arrows--big");
+    }
+  }
+
+  &:hover {
+    border-color: $color-apple;
+
+    &::before,
+    &::after {
+      background-color: $color-apple;
+    }
+  }
+
+  &:active {
+    border-color: rgba($color-apple, 0.6);
+
+    &::before,
+    &::after {
+      background-color: rgba($color-apple, 0.6);
     }
   }
 }

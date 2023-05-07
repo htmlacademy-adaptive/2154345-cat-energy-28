@@ -35,7 +35,7 @@
   grid-template-columns: 139px 1fr 139px;
 
   @media (min-width: $vp-768) {
-    padding: 56px 0;
+    padding: 56px 40px 60px 40px;
 
     grid-template-columns: 172px 1fr 160px;
   }
@@ -47,8 +47,9 @@
 
     background-color: $color-default-white;
 
-    grid-template-columns: 163px 1fr 175px;
     pointer-events: all;
+
+    grid-template-columns: 163px 1fr 175px;
   }
 }
 
@@ -60,8 +61,14 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    padding: 5px 0 0 0;
+
     font-size: 20px;
     line-height: 26px;
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 0;
   }
 }
 

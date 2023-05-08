@@ -1,17 +1,54 @@
 .additive {
+  position: relative;
+
+  padding: 15px 0 19px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $color-very-light-grey;
+  }
+
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $color-very-light-grey;
+  }
+
   @media (min-width: $vp-768) {
     display: grid;
+    padding: 26px 38px 28px 38px;
+
+    column-gap: 60px;
+
+    border: 1px solid $color-very-light-grey;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    column-gap: 60px;
     row-gap: 23px;
   }
 
   @media (min-width: $vp-1280) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 40px;
-    gap: 80px;
     align-items: center;
+    padding: 16px 0;
+
+    border: none;
+
+    gap: 0;
+    grid-template-columns: 1fr 82px 1fr 82px 1fr;
+    grid-template-rows: 40px;
   }
 }
 
@@ -25,6 +62,9 @@
 
   @media (min-width: $vp-768) {
     margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $vp-1280) {
@@ -43,18 +83,53 @@
   font-family: $font-lato;
   color: $color-charcoal;
 
+  justify-self: flex-end;
+
   @media (min-width: $vp-768) {
+    align-self: flex-end;
+    max-width: max-content;
     margin: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    gap: 50px;
   }
+
+  @media (min-width: $vp-1280) {
+    display: grid;
+    align-self: center;
+    width: 100%;
+    max-width: unset;
+
+    text-align: left;
+
+    grid-column: 3 / 5;
+    grid-template-columns: 1fr 82px;
+  }
+}
+
+.additive__key {
+  @media (min-width: $vp-768) {
+    justify-self: flex-end;
+  }
+
+  @media (min-width: $vp-1280) {
+    justify-self: flex-start;
+  }
+}
+
+.additive__value {
+  margin: 0;
 }
 
 .additive__order-button {
   width: 100%;
   padding: 10px 0;
-  text-align: center;
 
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
 
   @media (min-width: $vp-768) {
     grid-column: 1 / -1;
@@ -62,8 +137,7 @@
 
   @media (min-width: $vp-1280) {
     padding: 8px 26px;
-    width: 244px;
-    justify-self: end;
-    grid-column: 3;
+
+    grid-column: 5;
   }
 }

@@ -1,11 +1,15 @@
 .additionals {
   position: relative;
 
-  padding: 25px 0 0 0;
+  padding: 10px 0 0 0;
   overflow: hidden;
 
+  @media (min-width: $vp-768) {
+    padding: 24px 0 0 0;
+  }
+
   @media (min-width: $vp-1280) {
-    padding: 25px 0 86px 0;
+    padding: 32px 0 86px 0;
   }
 }
 
@@ -67,38 +71,20 @@
       background-color: $color-apple;
     }
   }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 81px -40px;
+  }
 }
 
 .additionals__list {
-  margin: 0 0 35px 0;
+  margin: 0;
   padding: 0;
 
   list-style-type: none;
 
   @media (min-width: $vp-768) {
     margin: 0;
-  }
-}
-
-.additionals__item {
-  position: relative;
-
-  padding: 13px 0 19px 0;
-
-  border-bottom: 1px solid $color-very-light-grey;
-
-  &:first-child {
-    border-top: 1px solid $color-very-light-grey;
-  }
-
-  @media (min-width: $vp-768) and (max-width: $vp-1280) {
-    padding: 26px 38px 28px 38px;
-
-    border: 1px solid $color-very-light-grey;
-  }
-
-  @media (min-width: $vp-1280) {
-    padding: 15px 0 17px 0;
   }
 }
 
@@ -142,11 +128,13 @@
   &::after {
     content: "";
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
+
     background-image: url("../img/decor-img/promo-kitty@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -159,6 +147,8 @@
 
   @media (min-width: $vp-768) and (max-width: $vp-1280) {
     padding: 71px 124px 69px 422px;
+
+    text-align: left;
 
     &::before {
       top: 50%;

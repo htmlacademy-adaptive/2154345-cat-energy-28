@@ -150,6 +150,10 @@ export const build = gulp.series(
     scripts,
     createWebp,
     svgOptimize
+  ),
+  gulp.series(
+    server,
+    watcher
   )
 )
 

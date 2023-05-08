@@ -108,66 +108,34 @@
   }
 
   &--leaf::before {
-    background-image: url("../img/benefits/leaf@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/benefits/leaf@2x.png");
-    }
+    background-image: url("../img/sprite.svg#leaf");
 
     @media (min-width: $vp-768) {
-      background-image: url("../img/benefits/leaf--big@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/benefits/leaf--big@2x.png");
-      }
+      background-image: url("../img/sprite.svg#leaf--big");
     }
   }
 
   &--boiling-water::before {
-    background-image: url("../img/benefits/boiling-water@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/benefits/boiling-water@2x.png");
-    }
+    background-image: url("../img/sprite.svg#boiling-water");
 
     @media (min-width: $vp-768) {
-      background-image: url("../img/benefits/boiling-water--big@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/benefits/boiling-water--big@2x.png");
-      }
+      background-image: url("../img/sprite.svg#boiling-water--big");
     }
   }
 
   &--eat::before {
-    background-image: url("../img/benefits/eat@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/benefits/eat@2x.png");
-    }
+    background-image: url("../img/sprite.svg#eat");
 
     @media (min-width: $vp-768) {
-      background-image: url("../img/benefits/eat--big@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/benefits/eat--big@2x.png");
-      }
+      background-image: url("../img/sprite.svg#eat--big");
     }
   }
 
   &--clock::before {
-    background-image: url("../img/benefits/clock@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/benefits/clock@2x.png");
-    }
+    background-image: url("../img/sprite.svg#clock");
 
     @media (min-width: $vp-768) {
-      background-image: url("../img/benefits/clock--big@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/benefits/clock--big@2x.png");
-      }
+      background-image: url("../img/sprite.svg#clock--big");
     }
   }
 

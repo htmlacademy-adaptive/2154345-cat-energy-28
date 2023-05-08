@@ -56,7 +56,7 @@
   width: 50px;
   height: 53px;
 
-  background-image: url("../img/options/cat-slim.png");
+  background-image: url("../img/sprite.svg#cat-slim");
 
   @media (min-width: $vp-768) {
     top: 81px;
@@ -66,7 +66,7 @@
     width: 200px;
     height: 211px;
 
-    background-image: url("../img/options/cat-slim--tablet.png");
+    background-image: url("../img/sprite.svg#cat-slim--tablet");
   }
 
   @media (min-width: $vp-1280) {
@@ -76,7 +76,7 @@
     width: 100px;
     height: 106px;
 
-    background-image: url("../img/options/cat-slim--desktop.png");
+    background-image: url("../img/sprite.svg#cat-slim--desktop");
   }
 }
 
@@ -87,7 +87,7 @@
   width: 67px;
   height: 50px;
 
-  background-image: url("../img/options/cat-fat.png");
+  background-image: url("../img/sprite.svg#cat-fat");
 
   @media (min-width: $vp-768) {
     top: 91px;
@@ -97,7 +97,7 @@
     width: 268px;
     height: 200px;
 
-    background-image: url("../img/options/cat-fat--tablet.png");
+    background-image: url("../img/sprite.svg#cat-fat--tablet");
   }
 
   @media (min-width: $vp-1280) {
@@ -107,7 +107,7 @@
     width: 134px;
     height: 100px;
 
-    background-image: url("../img/options/cat-fat--desktop.png");
+    background-image: url("../img/sprite.svg#cat-fat--desktop");
   }
 }
 

@@ -8,7 +8,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-// import svgstore from 'gulp-svgstore';
+import {stacksvg} from 'gulp-stacksvg';
 import {deleteAsync} from 'del';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
@@ -50,39 +50,56 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src([
+    'source/img/content/*.{jpg,png}',
+    'source/img/decor-img/*.{jpg,png}'
+  ], {
+    base: 'source'
+  })
     .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build'))
 }
 
 const copyImages = () => {
-  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/'])
-    .pipe(gulp.dest('build/img'))
+  return gulp.src([
+    'source/img/content/*.{jpg,png}',
+    'source/img/decor-img/*.{jpg,png}'
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
 }
 
 
 // Webp
 
 const createWebp = () => {
-  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*.*'])
+  return gulp.src('source/img/content/*.{jpg,png}')
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img/content'))
 }
 
 
 // Svg
 
-const svgOptimize = () => {
-  return gulp.src('source/img/**/*.svg')
+const createStack = () => {
+  return gulp.src('source/img/decor-svg/*.svg')
     .pipe(svgo())
+    .pipe(stacksvg({ output: 'sprite' }))
     .pipe(gulp.dest('build/img'))
 }
 
+const svgOptimize = () => {
+  return gulp.src('source/img/content/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img/content'))
+}
+
 const svgCopy = () => {
-  return gulp.src('source/img/**/*.svg')
-    .pipe(gulp.dest('build/img'))
+  return gulp.src('source/img/content/*.svg')
+    .pipe(gulp.dest('build/img/content'))
 }
 
 
@@ -104,7 +121,7 @@ const copy = (done) => {
 
 // Clean
 
-const clean = () => {
+export const clean = () => {
   return deleteAsync('build');
 }
 
@@ -144,12 +161,13 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  svgOptimize,
   gulp.parallel(
     styles,
     html,
     scripts,
     createWebp,
-    svgOptimize
+    createStack
   ),
   gulp.series(
     server,
@@ -162,12 +180,13 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  svgCopy,
   gulp.parallel(
     styles,
     html,
     scripts,
     createWebp,
-    svgCopy
+    createStack
   ),
   gulp.series(
     server,

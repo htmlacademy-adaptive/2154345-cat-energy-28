@@ -57,6 +57,16 @@
 
 .page-footer__link {
   padding: 10px 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__logo {
@@ -109,7 +119,8 @@
     mask-image: url("../img/sprite.svg#icon-tg");
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-apple;
   }
 
@@ -126,7 +137,10 @@
   margin: 0 auto;
   padding: 15px 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
+
     .page-footer__copyright-logo {
       background-color: $color-apple;
     }
@@ -162,6 +176,8 @@
 .page-footer__copyright-logo {
   width: 27px;
   height: 34px;
-  mask-image: url("../img/sprite.svg#copyright-logo");
+
   background-color: $color-dim-gray;
+
+  mask-image: url("../img/sprite.svg#copyright-logo");
 }

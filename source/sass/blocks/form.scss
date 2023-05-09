@@ -64,6 +64,8 @@
   line-height: 18px;
   color: $color-charcoal;
 
+  cursor: pointer;
+
   gap: 13px;
   grid-template-columns: max-content 1fr;
   grid-template-rows: 45px;
@@ -131,12 +133,12 @@
   background-color: $color-default-black;
   transform: translateY(-50%);
 
-  mask-image: url("../img/sprite.svg#email-icon");
+  mask-image: url("../img/sprite.svg#icon-email");
 }
 
 .form__owner-input:nth-child(2) {
   .form__input-sign {
-    mask-image: url("../img/sprite.svg#phone-icon");
+    mask-image: url("../img/sprite.svg#icon-phone");
   }
 }
 
@@ -352,7 +354,7 @@
   font-family: $font-oswald;
   text-transform: uppercase;
 
-  border: 1px solid $color-very-light-grey;
+  border: 1px solid $color-whisper;
 
   resize: none;
 
@@ -361,6 +363,16 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $color-very-light-grey;
+    outline: none;
+  }
+
+  &:focus-within {
+    border-color: $color-default-black;
   }
 }
 

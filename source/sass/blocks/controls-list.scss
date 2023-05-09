@@ -36,6 +36,8 @@
   display: grid;
   width: 100%;
 
+  cursor: pointer;
+
   gap: 15px;
   grid-template-columns: 30px auto;
   grid-template-rows: 30px;
@@ -47,6 +49,22 @@
 
   @media (min-width: $vp-1280) {
     gap: 25px;
+  }
+
+  &:hover {
+    .controls-list__sign {
+      border-color: $color-silver;
+    }
+  }
+
+  .controls-list__input:focus {
+    & + .controls-list__sign {
+      border-color: $color-silver;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

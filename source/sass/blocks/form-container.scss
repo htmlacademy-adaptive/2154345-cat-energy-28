@@ -1,5 +1,13 @@
 .form-container {
   padding: 27px 0 32px 0;
+
+  @media (min-width: $vp-768) {
+    padding: 64px 0 70px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 45px 0 82px 0;
+  }
 }
 
 .form-container__title {
@@ -15,6 +23,10 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 58px 0;
+  }
 }
 
 .form-container__slogan {
@@ -26,10 +38,14 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 46px 0;
     max-width: 323px;
+    margin: 0 0 46px 0;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 63px 0;
   }
 }

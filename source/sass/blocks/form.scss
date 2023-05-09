@@ -1,4 +1,8 @@
-.form__personal-programs-container {
+.form__container {
+  overflow: hidden;
+}
+
+.form__personal-programs-wrapper {
   @media (min-width: $vp-768) {
     margin: 0 0 71px 0;
   }
@@ -10,6 +14,10 @@
 
     gap: 60px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $vp-1280) {
+    gap: 80px;
   }
 }
 
@@ -48,15 +56,6 @@
   }
 }
 
-.form__owner-input {
-  position: relative;
-  z-index: 0;
-
-  @media (min-width: $vp-1280) {
-    margin: 0;
-  }
-}
-
 .form__input {
   display: grid;
   align-items: center;
@@ -80,8 +79,8 @@
   }
 
   .form__input-field:focus {
-    outline: none;
     border: 2px solid $color-default-black;
+    outline: none;
 
     & + .form__input-sign {
       background-color: $color-apple;
@@ -107,6 +106,17 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+}
+
+.form__owner-input {
+  position: relative;
+  z-index: 0;
+
+  @media (min-width: $vp-1280) {
+    margin: 0;
+
+    gap: 22px;
   }
 }
 
@@ -173,28 +183,29 @@
 
   border: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: -20px;
-    bottom: -1px;
-    left: -20px;
-
-    height: 1px;
-
-    background-color: $color-gainsboro;
-  }
-
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: -20px;
-    left: -20px;
+    bottom: -1px;
+    left: 50%;
 
+    width: 200vw;
     height: 1px;
 
     background-color: $color-gainsboro;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+
+    width: 200vw;
+    height: 1px;
+
+    background-color: $color-gainsboro;
+    transform: translateX(-50%);
   }
 
   @media (min-width: $vp-768) {
@@ -224,7 +235,7 @@
   border: none;
 
   .form__title {
-    margin: 0 0 26px 0;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $vp-768) {
@@ -255,35 +266,47 @@
       margin: 0;
     }
   }
+
+  @media (min-width: $vp-1280) {
+    gap: 80px;
+  }
 }
 
 .form__title {
   display: block;
-  margin: 0;
+  width: max-content;
+  max-width: 220px;
+  margin: 0 0 0 -20px;
+  padding: 0 15px 0 20px;
 
   font-size: 24px;
   line-height: 26px;
 
+  background-color: $color-default-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    z-index: -1;
+
+    width: 200vw;
+    height: 2px;
+
+    background-color: $color-apple;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: $vp-768) {
-    width: max-content;
+    max-width: unset;
     padding: 0 35px 0 40px;
 
     font-size: 36px;
     line-height: 36px;
 
-    background-color: $color-default-white;
-
     &::after {
-      content: "";
-      position: absolute;
       top: 22px;
-      left: 0;
-      z-index: -1;
-
-      width: 100vw;
-      height: 2px;
-
-      background-color: $color-apple;
     }
   }
 }
@@ -322,7 +345,7 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 9px 12px 0 15px;
+  padding: 9px 12px 10px 15px;
 
   font-size: 16px;
   line-height: 16px;
@@ -351,7 +374,7 @@
   border: none;
 
   .form__title {
-    margin: 0 0 34px 0;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $vp-768) {
@@ -374,13 +397,17 @@
     gap: 60px;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width: $vp-1280) {
+    gap: 80px;
+  }
 }
 
 .form__submit {
   display: block;
   width: 100%;
   margin: 0 0 21px 0;
-  padding: 7px;
+  padding: 10px;
 
   font-size: 16px;
   line-height: 20px;

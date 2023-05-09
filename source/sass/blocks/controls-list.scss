@@ -8,9 +8,11 @@
 .controls-list--checkboxes {
   @media (min-width: $vp-768) {
     display: grid;
+
+    column-gap: 60px;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 60px;
     row-gap: 32px;
 
     .controls-list__item:not(:last-child) {
@@ -41,6 +43,10 @@
   @media (min-width: $vp-768) {
     grid-template-columns: 40px auto;
     grid-template-rows: 40px;
+  }
+
+  @media (min-width: $vp-1280) {
+    gap: 25px;
   }
 }
 

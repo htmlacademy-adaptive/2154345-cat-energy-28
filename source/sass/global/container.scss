@@ -14,7 +14,7 @@
 }
 
 .form-container .container {
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-768) and (max-width: $vp-1280) {
     padding: 0 70px;
   }
 }

@@ -33,7 +33,7 @@
     width: calc(100% + 40px);
     height: calc(100% + 162px);
 
-    background-image: url("../img/decore-img/kitty.jpg");
+    background-image: url("../img/decor-img/kitty.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,7 +43,7 @@
     }
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/decore-img/kitty@2x.jpg");
+      background-image: url("../img/decor-img/kitty@2x.jpg");
     }
   }
 

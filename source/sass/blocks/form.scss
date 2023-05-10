@@ -227,30 +227,37 @@
   }
 }
 
+
+.form__owner-info-container {
+  margin: 0 0 24px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 65px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 67px 0;
+  }
+}
+
 .form__owner-info {
   position: relative;
 
-  margin: 0 0 24px 0;
-  padding: 0;
+  border: none;
   overflow: hidden;
 
-  border: none;
 
   .form__title {
     margin-bottom: 35px;
   }
 
   @media (min-width: $vp-768) {
-    margin: 0 0 65px 0;
-
     .form__title {
       margin: 0 0 76px -35px;
     }
   }
 
   @media (min-width: $vp-1280) {
-    margin: 0 0 67px 0;
-
     .form__title {
       margin: 0 0 76px -35px;
     }
@@ -313,12 +320,21 @@
   }
 }
 
+.form__comment-container {
+  margin: 0 0 23px 0;
+  overflow: hidden;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 65px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 67px 0;
+  }
+}
+
 .form__comment {
   position: relative;
-
-  margin: 0 0 23px 0;
-  padding: 0;
-  overflow: hidden;
 
   border: none;
 
@@ -327,16 +343,12 @@
   }
 
   @media (min-width: $vp-768) {
-    margin: 0 0 65px 0;
-
     .form__title {
       margin: 0 0 76px -35px;
     }
   }
 
   @media (min-width: $vp-1280) {
-    margin: 0 0 67px 0;
-
     .form__title {
       margin: 0 0 76px -35px;
     }
@@ -376,12 +388,21 @@
   }
 }
 
+.form__additionals-container {
+  margin: 0 0 34px 0;
+  overflow: hidden;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 54px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 61px 0;
+  }
+}
+
 .form__additionals {
   position: relative;
-
-  margin: 0 0 34px 0;
-  padding: 0;
-  overflow: hidden;
 
   border: none;
 
@@ -390,15 +411,9 @@
   }
 
   @media (min-width: $vp-768) {
-    margin: 0 0 54px 0;
-
     .form__title {
       margin: 0 0 57px -35px;
     }
-  }
-
-  @media (min-width: $vp-1280) {
-    margin: 0 0 61px 0;
   }
 }
 

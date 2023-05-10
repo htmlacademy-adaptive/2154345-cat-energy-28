@@ -1,11 +1,37 @@
 .button {
   display: block;
 
-  font-family: inherit;
+  font-family: $font-oswald;
   color: $color-default-white;
   text-transform: uppercase;
 
   background-color: $color-apple;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-apple--hover;
+  }
+
+  &:active {
+    color: rgba($color-default-white, 0.3);
+
+    background-color: $color-apple--hover;
+  }
+}
+
+.button--secondary {
+  color: $color-charcoal;
+
+  background-color: $color-white-smoke;
+
+  &:hover,
+  &:focus {
+    background-color: $color-whisper;
+  }
+
+  &:active {
+    color: rgba($color-charcoal, 0.3);
+  }
 }

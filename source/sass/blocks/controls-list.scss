@@ -8,9 +8,11 @@
 .controls-list--checkboxes {
   @media (min-width: $vp-768) {
     display: grid;
+
+    column-gap: 60px;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 60px;
     row-gap: 32px;
 
     .controls-list__item:not(:last-child) {
@@ -34,6 +36,8 @@
   display: grid;
   width: 100%;
 
+  cursor: pointer;
+
   gap: 15px;
   grid-template-columns: 30px auto;
   grid-template-rows: 30px;
@@ -41,6 +45,26 @@
   @media (min-width: $vp-768) {
     grid-template-columns: 40px auto;
     grid-template-rows: 40px;
+  }
+
+  @media (min-width: $vp-1280) {
+    gap: 25px;
+  }
+
+  &:hover {
+    .controls-list__sign {
+      border-color: $color-silver;
+    }
+  }
+
+  .controls-list__input:focus {
+    & + .controls-list__sign {
+      border-color: $color-silver;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -79,10 +103,10 @@
   width: 26px;
   height: 26px;
 
-  background-image: url("../img/form/tick.svg");
+  background-image: url("../img/sprite.svg#tick");
 
   @media (min-width: $vp-768) {
-    background-image: url("../img/form/tick--big.svg");
+    background-image: url("../img/sprite.svg#tick--big");
   }
 }
 

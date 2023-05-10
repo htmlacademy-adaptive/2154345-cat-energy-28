@@ -16,11 +16,11 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -100px;
       left: 50%;
 
       width: 200vw;
-      height: calc(100% - 151px);
+      height: calc(100% - 51px);
 
       background-color: $color-whisper;
       transform: translateX(-50%);
@@ -91,9 +91,9 @@
 
 .slider__thumb {
   position: absolute;
-  z-index: 10;
   top: 50%;
   left: 50%;
+  z-index: 10;
 
   display: block;
   width: 40px;
@@ -103,9 +103,9 @@
   border: 3px solid $color-dim-gray;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
   // pointer-events: none;
   transform-style: preserve-3d;
+  cursor: pointer;
 
 
   &::before {
@@ -116,11 +116,11 @@
 
     width: 4px;
     height: 256px;
-    cursor: pointer;
 
     background-color: $color-dim-gray;
     border-radius: 2px;
     transform: translateX(-50%) translateZ(-10px);
+    cursor: pointer;
 
     @media (min-width: $vp-768) {
       top: -236px;
@@ -134,11 +134,14 @@
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%);
+
     width: 24px;
     height: 18px;
-    mask-image: url("../img/sprite.svg#arrows");
+
     background-color: $color-dim-gray;
+    transform: translate(-50%);
+
+    mask-image: url("../img/sprite.svg#arrows");
 
     @media (min-width: $vp-768) {
       mask-image: url("../img/sprite.svg#arrows--big");

@@ -1,12 +1,13 @@
 .hero {
-  padding: 35px 0 10px 0;
+  padding: 27px 0 10px 0;
 
   text-align: center;
   color: $color-default-white;
 
   @media (min-width: $vp-768) {
-    padding: 62px 118px 526px 118px;
     position: relative;
+
+    padding: 62px 90px 526px 90px;
 
     text-align: left;
     color: $color-default-black;
@@ -15,8 +16,7 @@
   }
 
   @media (min-width: $vp-1280) {
-
-    padding: 111px 118px 185px 118px;
+    padding: 82px 78px 185px 78px;
   }
 }
 
@@ -26,14 +26,17 @@
   &::before {
     content: "";
     position: absolute;
-    top: -35px;
+    top: -27px;
     left: -20px;
     z-index: -1;
 
     width: calc(100% + 40px);
-    height: calc(100% + 150px);
+    height: calc(100% + 162px);
 
-    background-image: url("../img/hero/kitty.jpg");
+    background-image: image-set(
+    url("../img/decor-img/kitty.webp") 1x,
+    url("../img/decor-img/kitty.jpg") 1x,
+    );
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,19 +46,22 @@
     }
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero/kitty@2x.jpg");
+      background-image: image-set(
+      url("../img/decor-img/kitty@2x.webp") 2x,
+      url("../img/decor-img/kitty@2x.jpg") 2x,
+      );
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: -35px;
+    top: -27px;
     left: -20px;
     z-index: -1;
 
     width: calc(100% + 40px);
-    height: calc(100% + 150px);
+    height: calc(100% + 162px);
 
     background-color: rgba($color-apple, 0.85);
 
@@ -72,7 +78,7 @@
   @media (min-width: $vp-1280) {
     position: relative;
 
-    max-width: 1204px;
+    max-width: 1280px;
   }
 }
 
@@ -86,7 +92,7 @@
 
   @media (min-width: $vp-768) {
     max-width: 420px;
-    margin: 0 0 41px 0;
+    margin: 0 0 43px 0;
 
     font-size: 60px;
     line-height: 60px;
@@ -126,7 +132,7 @@
 
   @media (min-width: $vp-1280) {
     top: -82px;
-    left: 448px;
+    left: 478px;
 
     transform: none;
   }
@@ -134,7 +140,7 @@
 
 .hero__link {
   display: block;
-  padding: 7px;
+  padding: 11px;
 
   font-size: 14px;
   line-height: 18px;
@@ -142,7 +148,7 @@
   @media (min-width: $vp-768) {
     order: 2;
     width: max-content;
-    padding: 14px 26px;
+    padding: 17px 28px;
 
     font-size: 20px;
     line-height: 20px;

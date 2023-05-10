@@ -1,9 +1,13 @@
 .page-footer {
-  padding: 40px;
+  padding: 30px 0 23px 0;
 
   background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
+    padding: 41px 0;
+  }
+
+  @media (min-width: $vp-1280) {
     padding: 55px 0;
   }
 }
@@ -11,9 +15,9 @@
 .page-footer__wrapper {
   display: grid;
 
-  gap: 40px;
+  gap: 16px;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, max-content);
 
   @media (min-width: $vp-768) {
     grid-template-columns: repeat(3, 1fr);
@@ -34,7 +38,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -10px;
     left: 0;
 
     height: 1px;
@@ -51,6 +55,20 @@
   }
 }
 
+.page-footer__link {
+  padding: 10px 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__logo {
   display: block;
 }
@@ -63,14 +81,15 @@
 
 .page-footer__social-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50px;
   width: min-content;
+  min-width: 156px;
   margin: 0;
   padding: 0;
-  min-width: 132px;
 
   list-style-type: none;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 46px;
 }
 
 .page-footer__social-item {
@@ -81,10 +100,12 @@
   display: block;
   width: 100%;
   height: 100%;
-  mask-size: 29px 22px;
-  mask-repeat: no-repeat;
-  mask-position: 50%;
+
   background-color: $color-dim-gray;
+
+  mask-position: 50%;
+  mask-repeat: no-repeat;
+  mask-size: 29px 22px;
 
   &--vk {
     mask-image: url("../img/sprite.svg#icon-vk");
@@ -98,7 +119,8 @@
     mask-image: url("../img/sprite.svg#icon-tg");
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-apple;
   }
 
@@ -111,12 +133,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 180px;
+  max-width: 280px;
   margin: 0 auto;
+  padding: 15px 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
+
     .page-footer__copyright-logo {
-      color: $color-apple;
+      background-color: $color-apple;
     }
   }
 
@@ -126,7 +152,7 @@
     }
 
     .page-footer__copyright-logo {
-      color: rgba($color-apple, 0.3);
+      background-color: rgba($color-apple, 0.3);
     }
   }
 
@@ -148,5 +174,10 @@
 }
 
 .page-footer__copyright-logo {
-  color: $color-charcoal;
+  width: 27px;
+  height: 34px;
+
+  background-color: $color-dim-gray;
+
+  mask-image: url("../img/sprite.svg#copyright-logo");
 }

@@ -11,13 +11,13 @@
 
   &:hover,
   &:focus {
-    background-color: $color-apple--hover;
+    background-color: $color-apple-hover;
   }
 
   &:active {
     color: rgba($color-default-white, 0.3);
 
-    background-color: $color-apple--hover;
+    background-color: $color-apple-hover;
   }
 }
 

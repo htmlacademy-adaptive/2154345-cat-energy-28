@@ -19,7 +19,7 @@
   gap: 35px;
 
   @media (min-width: $vp-768) {
-    gap: 69px;
+    gap: 67px;
   }
 
   @media (min-width: $vp-1280) {
@@ -133,7 +133,7 @@
       width: 80px;
       height: 83px;
 
-      background-image: url("../img/sprite.svg#gift-icon--big");
+      background-image: url("../img/sprite.svg#gift-icon-big");
     }
   }
 
@@ -148,8 +148,8 @@
     height: 100%;
 
     background-image: image-set(
-    url("../img/decor-img/promo-kitty@1x.webp") 1x,
-    url("../img/decor-img/promo-kitty@1x.jpg") 1x
+    url("../img/decor/promo-kitty@1x.webp") 1x,
+    url("../img/decor/promo-kitty@1x.jpg") 1x
     );
     background-repeat: no-repeat;
     background-position: center;
@@ -157,8 +157,8 @@
 
     @media (min-resolution: $retina-dppx) {
       background-image: image-set(
-      url("../img/decor-img/promo-kitty@2x.webp") 2x,
-      url("../img/decor-img/promo-kitty@2x.jpg") 2x
+      url("../img/decor/promo-kitty@2x.webp") 2x,
+      url("../img/decor/promo-kitty@2x.jpg") 2x
       );
     }
   }
@@ -176,10 +176,10 @@
     }
 
     &::after {
-      background-image: url("../img/decor-img/promo-kitty--big@1x.jpg");
+      background-image: url("../img/decor/promo-kitty-big@1x.jpg");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/decor-img/promo-kitty--big@2x.jpg");
+        background-image: url("../img/decor/promo-kitty-big@2x.jpg");
       }
     }
   }

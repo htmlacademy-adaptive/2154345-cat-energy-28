@@ -29,7 +29,7 @@
 
   @media (min-width: $vp-768) {
     display: grid;
-    padding: 26px 38px 28px 38px;
+    padding: 27px 38px 28px 38px;
 
     column-gap: 60px;
 
@@ -38,6 +38,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     row-gap: 23px;
+
+    &:not(:first-child) {
+      border-top: none;
+    }
   }
 
   @media (min-width: $vp-1280) {

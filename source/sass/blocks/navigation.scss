@@ -149,15 +149,10 @@
     line-height: 30px;
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
+  &:hover,
   &:focus {
-    border-radius: 10px;
-    outline: 1px solid $color-dim-gray;
-    outline-offset: 5px;
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {

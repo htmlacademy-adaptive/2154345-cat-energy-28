@@ -13,12 +13,12 @@
       width: 50%;
       height: 100%;
 
-      background-image: url("../img/decor-img/kitty-big.jpg");
+      background-image: url("../img/decor/kitty-big.jpg");
       background-repeat: no-repeat;
       background-size: cover;
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/decor-img/kitty-big@2x.jpg");
+        background-image: url("../img/decor/kitty-big@2x.jpg");
       }
     }
 

@@ -76,13 +76,12 @@
 
   &:hover {
     .form__input-field {
-      border-color: $color-very-light-grey;
+      outline-color: $color-very-light-grey;
     }
   }
 
   .form__input-field:focus {
-    border: 2px solid $color-default-black;
-    outline: none;
+    outline: 2px solid $color-default-black;
 
     & + .form__input-sign {
       background-color: $color-apple;
@@ -91,7 +90,7 @@
 
   &--error {
     .form__input-field {
-      border: 2px solid $color-light-coral;
+      outline: 2px solid $color-light-coral;
     }
 
     .form__input-sign {
@@ -160,14 +159,9 @@
   font-family: $font-oswald;
   color: $color-charcoal;
 
-  border: 1px solid $color-whisper;
+  outline: 1px solid $color-whisper;
   border-radius: 0;
-
-  &:focus,
-  &:focus-visible {
-    border-color: #00ff00;
-    border-radius: 0;
-  }
+  border: none;
 
   @media (min-width: $vp-768) {
     padding: 10px 20px;
@@ -214,7 +208,7 @@
     margin: 0;
     padding: 25px 28px 29px 28px;
 
-    border: 1px solid $color-whisper;
+    outline: 1px solid $color-whisper;
 
     &::before,
     &::after {
@@ -229,7 +223,9 @@
 
 
 .form__owner-info-container {
+  position: relative;
   margin: 0 0 24px 0;
+  overflow: hidden;
 
   @media (min-width: $vp-768) {
     margin: 0 0 65px 0;
@@ -241,10 +237,7 @@
 }
 
 .form__owner-info {
-  position: relative;
-
   border: none;
-  overflow: hidden;
 
 
   .form__title {
@@ -323,6 +316,7 @@
 .form__comment-container {
   margin: 0 0 23px 0;
   overflow: hidden;
+  position: relative;
 
   @media (min-width: $vp-768) {
     margin: 0 0 65px 0;
@@ -334,8 +328,6 @@
 }
 
 .form__comment {
-  position: relative;
-
   border: none;
 
   .form__title {
@@ -366,7 +358,9 @@
   font-family: $font-oswald;
   text-transform: uppercase;
 
-  border: 1px solid $color-whisper;
+  border: none;
+  outline: 1px solid $color-whisper;
+  outline-offset: -1px;
 
   resize: none;
 
@@ -379,18 +373,18 @@
 
   &:hover,
   &:focus {
-    border-color: $color-very-light-grey;
-    outline: none;
+    outline-color: $color-very-light-grey;
   }
 
   &:focus-within {
-    border-color: $color-default-black;
+    outline-color: $color-default-black;
   }
 }
 
 .form__additionals-container {
   margin: 0 0 34px 0;
   overflow: hidden;
+  position: relative;
 
   @media (min-width: $vp-768) {
     margin: 0 0 54px 0;
@@ -402,8 +396,6 @@
 }
 
 .form__additionals {
-  position: relative;
-
   border: none;
 
   .form__title {

@@ -2,8 +2,6 @@
   position: relative;
   z-index: 1;
 
-  padding: 12px 0 16px 0;
-
   border-bottom: 1px solid $color-gainsboro;
 
   &::before {
@@ -36,6 +34,7 @@
 
 .page-header__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
@@ -44,6 +43,7 @@
   z-index: 5;
 
   display: block;
+  padding: 12px 0 16px 0;
 
   &:focus {
     border-radius: 10px;
@@ -53,6 +53,10 @@
     .page-header__logo {
       opacity: 0.8;
     }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0;
   }
 }
 

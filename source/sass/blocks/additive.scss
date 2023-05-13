@@ -46,13 +46,13 @@
 
   @media (min-width: $vp-1280) {
     align-items: center;
-    padding: 16px 0;
+    padding: 18px 0;
 
     border: none;
 
     gap: 0;
     grid-template-columns: 1fr 82px 1fr 82px 1fr;
-    grid-template-rows: 40px;
+    // grid-template-rows: 40px;
   }
 }
 
@@ -114,6 +114,8 @@
 }
 
 .additive__key {
+  max-width: 135px;
+
   @media (min-width: $vp-768) {
     justify-self: flex-end;
   }
@@ -124,6 +126,7 @@
 }
 
 .additive__value {
+  max-width: 135px;
   margin: 0;
 }
 

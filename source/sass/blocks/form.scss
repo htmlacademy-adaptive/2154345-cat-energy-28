@@ -1,14 +1,14 @@
-.form__container {
+.form__cat-info {
   overflow: hidden;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 71px 0;
+    margin-bottom: 71px;
   }
 
   @media (min-width: $vp-1280) {
     display: grid;
     align-items: center;
-    margin: 0 0 65px 0;
+    margin-bottom: 65px;
 
     gap: 80px;
     grid-template-columns: 1fr 1fr;
@@ -227,6 +227,7 @@
     padding: 25px 28px 29px 28px;
 
     outline: 1px solid $color-whisper;
+    outline-offset: -1px;
 
     &::before,
     &::after {

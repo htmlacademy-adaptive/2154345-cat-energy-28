@@ -1,8 +1,22 @@
 .features-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin: 0;
 
   list-style-type: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-lato;
+  color: $color-charcoal;
+
+  grid-column: 2;
+  grid-row: 2;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 33px 0;
+
+    font-size: 16px;
+  }
 }
 
 .features-list__item {
@@ -11,6 +25,32 @@
 
   @media (min-width: $vp-768) {
     padding: 5px 0 9px 0;
+
     border-bottom: 1px solid $color-very-light-grey;
+  }
+}
+
+.features-list__key {
+  max-width: 65px;
+
+  @media (min-width: $vp-768) {
+    max-width: 120px;
+  }
+
+  @media (min-width: $vp-1280) {
+    max-width: 85px;
+  }
+}
+
+.features-list__value {
+  max-width: 65px;
+  margin: 0;
+
+  @media (min-width: $vp-768) {
+    max-width: 120px;
+  }
+
+  @media (min-width: $vp-1280) {
+    max-width: 85px;
   }
 }

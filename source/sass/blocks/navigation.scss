@@ -58,25 +58,31 @@
 
 .navigation__list {
   position: absolute;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  top: -700px;
   left: 0;
 
-  display: block;
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 
   list-style-type: none;
   text-align: center;
+  transition: top 0.5s;
 
   @media (min-width: $vp-768) {
     position: static;
     z-index: 5;
 
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-self: flex-end;
     min-width: 440px;
+    max-width: 500px;
     height: auto;
   }
 
@@ -85,30 +91,73 @@
   }
 }
 
-//Поочередно выдвигает пункты бургерного меню(первый(i = 1) элемент примет положение top: 1 * 66px, второй(i = 2) top: 132px...
-.navigation__list--active {
-  @for $i from 1 through 3 {
-    .navigation__item:nth-child(#{$i}) {
-      top: #{$i * 66}px;
+.navigation--no-js {
+  @media (max-width: $vp-768) {
+    z-index: 5;
+
+    width: 100%;
+
+    .navigation__toggle {
+      display: none;
+    }
+
+    .navigation__list {
+      position: static;
+    }
+
+    .navigation__item {
+      position: static;
     }
   }
 }
 
-.navigation__item {
-  position: absolute;
-  top: -200px;
-  left: 0;
-  z-index: 1;
+//Поочередно выдвигает пункты бургерного меню(первый(i = 1) элемент примет положение top: 1 * 66px, второй(i = 2) top: 132px...
+.navigation__list--active {
+  top: 66px;
+}
 
-  display: block;
+.navigation__item {
   width: 100%;
-  padding: 22px 10px 24px 10px;
 
   background-color: $color-default-white;
-  border-top: 1px solid $color-whisper;
-  border-bottom: 1px solid $color-whisper;
 
-  transition: all 0.5s ease;
+  &:first-child {
+    .navigation__link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 10;
+
+      width: 200vw;
+      height: 1px;
+
+      background-color: $color-whisper;
+      transform: translateX(-50%);
+
+      @media (min-width: $vp-768) {
+        display: none;
+      }
+    }
+  }
+
+  .navigation__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+
+    width: 200vw;
+    height: 1px;
+
+    background-color: $color-whisper;
+    transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
 
   @media (min-width: $vp-768) {
     position: static;
@@ -118,7 +167,6 @@
     padding: 0;
 
     background-color: $color-transparent;
-    border: none;
 
     transition: none;
   }
@@ -129,6 +177,7 @@
 
   display: block;
   margin: 0;
+  padding: 22px 10px 24px 10px;
 
   font-weight: 500;
   font-size: 20px;
@@ -149,14 +198,9 @@
     line-height: 30px;
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
+  &:hover,
   &:focus {
-    border-radius: 10px;
-    outline: 1px solid $color-dim-gray;
-    outline-offset: 5px;
+    outline: none;
     opacity: 0.6;
   }
 

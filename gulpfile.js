@@ -52,7 +52,7 @@ const scripts = () => {
 const optimizeImages = () => {
   return gulp.src([
     'source/img/content/*.{jpg,png}',
-    'source/img/decor-img/*.{jpg,png}'
+    'source/img/decor/*.{jpg,png}'
   ], {
     base: 'source'
   })
@@ -63,7 +63,7 @@ const optimizeImages = () => {
 const copyImages = () => {
   return gulp.src([
     'source/img/content/*.{jpg,png}',
-    'source/img/decor-img/*.{jpg,png}'
+    'source/img/decor/*.{jpg,png}'
   ], {
     base: 'source'
   })
@@ -76,7 +76,7 @@ const copyImages = () => {
 const createWebp = () => {
   return gulp.src([
     'source/img/content/*.{jpg,png}',
-    'source/img/decor-img/*.{jpg,png}'
+    'source/img/decor/*.{jpg,png}'
   ], {
     base: 'source'
   })
@@ -90,21 +90,21 @@ const createWebp = () => {
 // Svg
 
 const createStack = () => {
-  return gulp.src('source/img/decor-svg/*.svg')
+  return gulp.src('source/img/stack/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: 'sprite' }))
     .pipe(gulp.dest('build/img'))
 }
 
 const svgOptimize = () => {
-  return gulp.src('source/img/content/*.svg')
+  return gulp.src('source/img/svg/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('build/img/content'))
+    .pipe(gulp.dest('build/img/svg'))
 }
 
 const svgCopy = () => {
-  return gulp.src('source/img/content/*.svg')
-    .pipe(gulp.dest('build/img/content'))
+  return gulp.src('source/img/svg/*.svg')
+    .pipe(gulp.dest('build/img/svg'))
 }
 
 
@@ -154,9 +154,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts))
-  gulp.watch('source/*.html', gulp.series(html)).on('change', browser.reload);
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles, reload));
+  gulp.watch('source/js/script.js', gulp.series(scripts, reload))
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 

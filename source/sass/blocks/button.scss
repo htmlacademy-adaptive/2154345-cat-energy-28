@@ -1,5 +1,6 @@
 .button {
   display: block;
+  max-width: 100%;
 
   font-family: $font-oswald;
   color: $color-default-white;
@@ -11,13 +12,13 @@
 
   &:hover,
   &:focus {
-    background-color: $color-apple--hover;
+    background-color: $color-apple-hover;
   }
 
   &:active {
     color: rgba($color-default-white, 0.3);
 
-    background-color: $color-apple--hover;
+    background-color: $color-apple-hover;
   }
 }
 

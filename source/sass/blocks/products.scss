@@ -25,7 +25,7 @@
   }
 
   @media (min-width: $vp-1280) {
-    margin: 0 0 100px 0;
+    margin: 0 0 82px 0;
   }
 }
 
@@ -43,13 +43,13 @@
     column-gap: 8.24%;
 
     grid-template-columns: 1fr 1fr;
-    row-gap: 67px;
+    row-gap: 60px;
   }
 
   @media (min-width: $vp-1280) {
     column-gap: 6.56%;
 
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 77px;
+    row-gap: 62px;
   }
 }

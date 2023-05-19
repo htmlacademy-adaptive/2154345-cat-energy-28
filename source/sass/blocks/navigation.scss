@@ -58,11 +58,11 @@
 
 .navigation__list {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: -700px;
+  top: -1000px;
   left: 0;
 
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -70,7 +70,8 @@
 
   list-style-type: none;
   text-align: center;
-  transition: top 0.5s;
+
+  transition: top 0.6s;
 
   @media (min-width: $vp-768) {
     position: static;
@@ -111,7 +112,6 @@
   }
 }
 
-//Поочередно выдвигает пункты бургерного меню(первый(i = 1) элемент примет положение top: 1 * 66px, второй(i = 2) top: 132px...
 .navigation__list--active {
   top: 66px;
 }
@@ -141,24 +141,6 @@
     }
   }
 
-  .navigation__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: 2;
-
-    width: 200vw;
-    height: 1px;
-
-    background-color: $color-whisper;
-    transform: translateX(-50%);
-
-    @media (min-width: $vp-768) {
-      display: none;
-    }
-  }
-
   @media (min-width: $vp-768) {
     position: static;
 
@@ -185,6 +167,52 @@
   color: $color-default-black;
   text-transform: uppercase;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+
+    width: 200vw;
+    height: 1px;
+
+    background-color: $color-whisper;
+    transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
+  &--current {
+    @media (min-width: $vp-768) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background-color: $color-apple;
+        transform: unset;
+      }
+    }
+  }
+
+  &--white {
+    @media (min-width: $vp-1280) {
+      color: $color-default-white;
+
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
   @media (min-width: $vp-768) {
     padding: 17px 0 10px 0;
 
@@ -200,36 +228,11 @@
 
   &:hover,
   &:focus {
-    outline: none;
     opacity: 0.6;
+    outline-offset: -1px;
   }
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.navigation__link--current::after {
-  @media (min-width: $vp-768) {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background-color: $color-apple;
-  }
-}
-
-// По макету необходим белый цвет шрифта только на главной странице при ширине экрана более 1024px
-.page-intro .navigation__link {
-  @media (min-width: $vp-1280) {
-    color: $color-default-white;
-
-    &::after {
-      background-color: $color-default-white;
-    }
   }
 }

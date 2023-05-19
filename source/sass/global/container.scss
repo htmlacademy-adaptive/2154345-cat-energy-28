@@ -13,13 +13,13 @@
   }
 }
 
-.form-container .container {
+.container--form {
   @media (min-width: $vp-768) and (max-width: $vp-1280) {
     padding: 0 70px;
   }
 }
 
-.address .container {
+.container--address {
   @media (min-width: $vp-1280) {
     pointer-events: none;
   }

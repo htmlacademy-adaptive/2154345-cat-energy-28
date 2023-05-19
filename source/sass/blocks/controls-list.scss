@@ -27,10 +27,8 @@
   }
 }
 
-.controls-list__item {
-  &:not(:last-child) {
-    margin-bottom: 13px;
-  }
+.controls-list__item:not(:last-child) {
+  margin-bottom: 13px;
 }
 
 .controls-list__control {
@@ -67,10 +65,20 @@
   }
 }
 
+.controls-list__input:disabled {
+  & + .controls-list__sign {
+    opacity: 0.3;
+  }
+
+  & ~ .controls-list__title {
+    opacity: 0.3;
+  }
+}
+
 .controls-list__sign {
   position: relative;
 
-  align-self: center;
+  align-self: flex-start;
   width: 30px;
   height: 30px;
 

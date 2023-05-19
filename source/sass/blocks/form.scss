@@ -33,20 +33,21 @@
     height: 1px;
 
     background-color: $color-gainsboro;
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
   }
 
   @media (min-width: $vp-768) {
     margin: 0 0 52px 0;
     padding: 20px 0;
-
-    &::after {
-      display: none;
-    }
   }
 
   @media (min-width: $vp-1280) {
     margin: 0;
     padding: 0;
+    align-self: flex-start;
   }
 }
 
@@ -121,15 +122,15 @@
   }
 
   .form__input-field {
-    padding: 14px 10px 10px 13px;
+    padding: 14px 42px 10px 13px;
+
+    @media (min-width: $vp-768) {
+      padding: 11px 42px 11px 20px;
+    }
   }
 
   @media (min-width: $vp-768) {
     gap: 20px;
-
-    .form__input-field {
-      padding: 11px 10px 11px 20px;
-    }
   }
 
   @media (min-width: $vp-1280) {
@@ -185,6 +186,12 @@
   outline: 1px solid $color-whisper;
   outline-offset: -1px;
 
+  &::placeholder {
+    color: $color-charcoal;
+
+    opacity: 1;
+  }
+
   @media (min-width: $vp-768) {
     padding: 11px 20px;
 
@@ -212,6 +219,10 @@
 
     background-color: $color-gainsboro;
     transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
   }
 
   &::before {
@@ -225,6 +236,10 @@
 
     background-color: $color-gainsboro;
     transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
   }
 
   @media (min-width: $vp-768) {
@@ -233,11 +248,6 @@
 
     outline: 1px solid $color-whisper;
     outline-offset: -1px;
-
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 
   @media (min-width: $vp-1280) {
@@ -267,10 +277,8 @@
 
   .form__title {
     margin-bottom: 37px;
-  }
 
-  @media (min-width: $vp-768) {
-    .form__title {
+    @media (min-width: $vp-768) {
       margin: 0 0 76px -42px;
     }
   }
@@ -280,16 +288,12 @@
   @media (min-width: $vp-1280) {
     display: grid;
 
-    gap: 60px;
+    gap: 80px;
     grid-template-columns: 1fr 1fr;
 
     .form__owner-input {
       margin: 0;
     }
-  }
-
-  @media (min-width: $vp-1280) {
-    gap: 80px;
   }
 }
 
@@ -317,6 +321,10 @@
 
     background-color: $color-apple;
     transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      top: 22px;
+    }
   }
 
   @media (min-width: $vp-768) {
@@ -325,10 +333,6 @@
 
     font-size: 36px;
     line-height: 36px;
-
-    &::after {
-      top: 22px;
-    }
   }
 }
 
@@ -352,10 +356,8 @@
 
   .form__title {
     margin-bottom: 38px;
-  }
 
-  @media (min-width: $vp-768) {
-    .form__title {
+    @media (min-width: $vp-768) {
       margin: 0 0 76px -42px;
     }
   }
@@ -389,6 +391,12 @@
     padding: 12px 12px 14px 19px;
   }
 
+  &::placeholder {
+    color: $color-charcoal;
+
+    opacity: 1;
+  }
+
   &:hover,
   &:focus {
     outline-color: $color-very-light-grey;
@@ -419,10 +427,8 @@
 
   .form__title {
     margin-bottom: 34px;
-  }
 
-  @media (min-width: $vp-768) {
-    .form__title {
+    @media (min-width: $vp-768) {
       margin: 0 0 57px -42px;
     }
   }

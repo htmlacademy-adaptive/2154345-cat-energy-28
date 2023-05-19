@@ -8,8 +8,6 @@
     <title>HTML Academy: Кэт энерджи, форма</title>
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="img/decor/kitty.webp" media="screen and (max-width: 768)">
-    <link rel="preload" href="img/decor/kitty-big.webp" media="screen and (min-width: 1280)">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
@@ -53,7 +51,7 @@
 
     <main class="page-container">
       <section class="form-container">
-        <div class="form-container__wrapper container">
+        <div class="container container--form">
           <h1 class="form-container__title">Подбор программы</h1>
           <p class="form-container__slogan">
             Заполните анкету, и мы подберем
@@ -61,7 +59,7 @@
           </p>
         </div>
         <form class="form-container__form form" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="form__cat-info container">
+          <div class="form__cat-info container container--form">
               <fieldset class="form__personal-info">
                 <legend class="visually-hidden">Персональные данные кота</legend>
                 <label class="form__input">
@@ -105,7 +103,7 @@
             </fieldset>
           </div>
           <div class="form__owner-info-container">
-            <fieldset class="form__owner-info container">
+            <fieldset class="form__owner-info container container--form">
               <legend class="form__title">
                 Контактные данные (владельца кота)
               </legend>
@@ -124,13 +122,13 @@
             </fieldset>
           </div>
           <div class="form__comment-container">
-            <fieldset class="form__comment container">
+            <fieldset class="form__comment container container--form">
               <legend class="form__title">Комментарий</legend>
-              <textarea class="form__textarea" cols="30" rows="8" name="user-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="form__textarea" cols="30" rows="8" name="user-comment" placeholder="Расскажите обо всех повадках кота" aria-label="Расскажите обо всех повадках вашего кота"></textarea>
             </fieldset>
           </div>
           <div class="form__additionals-container">
-            <fieldset class="form__additionals container">
+            <fieldset class="form__additionals container container--form">
               <legend class="form__title">Дополнительно</legend>
               <ul class="form__checkbox-list controls-list controls-list--checkboxes">
                 <li class="controls-list__item">
@@ -165,7 +163,7 @@
             </fieldset>
           </div>
           <div class="form__button-wrapper">
-            <div class="form__button-wrapper-container container">
+            <div class="form__button-wrapper-container container container--form">
               <button class="form__submit button" type="submit">Отправить заявку</button>
               <span class="form__additional-info">* — Обязательные поля</span>
             </div>
@@ -175,7 +173,7 @@
 
       <section class="address">
         <h2 class="visually-hidden">Наш адрес.</h2>
-        <div class="container">
+        <div class="container container--address">
           <div class="address__content">
             <p class="address__slogan">Приглашаем<br>к сотрудничеству дилеров!</p>
             <div class="address__location">
@@ -188,11 +186,11 @@
           <noscript>
             <picture>
               <source media="(min-width: 1280px)"
-                srcset="img/content/map-image-desktop@1x.webp 1x, img/content/map-image-desktop@2x.webp 2x" width="1440" height="400">
+                srcset="img/content/map-image-desktop@1x.webp 1x, img/content/map-image-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
               <source media="(min-width: 768px)"
-                srcset="img/content/map-image-tablet@1x.webp 1x, img/content/map-image-tablet@2x.webp 2x" width="1440" height="400">
+                srcset="img/content/map-image-tablet@1x.webp 1x, img/content/map-image-tablet@2x.webp 2x" width="1440" height="400" type="image/webp">
               <source
-                srcset="img/content/map-image@1x.webp 1x, img/content/map-image@2x.webp 2x" width="320" height="362">
+                srcset="img/content/map-image@1x.webp 1x, img/content/map-image@2x.webp 2x" width="320" height="362" type="image/webp">
 
               <source media="(min-width: 1280px)"
                 srcset="img/content/map-image-desktop@1x.png 1x, img/content/map-image-desktop@2x.png 2x" width="1440" height="400">

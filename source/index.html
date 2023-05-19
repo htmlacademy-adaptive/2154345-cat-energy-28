@@ -8,8 +8,6 @@
     <title>HTML Academy: Кэт энерджи, главная страница</title>
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="img/decor/kitty.webp" media="screen and (max-width: 768)">
-    <link rel="preload" href="img/decor/kitty-big.webp" media="screen and (min-width: 1280)">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
@@ -39,13 +37,13 @@
             </div>
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--current" href="#">Главная</a>
+                <a class="navigation__link navigation__link--current navigation__link--white" href="#">Главная</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+                <a class="navigation__link navigation__link--white" href="catalog.html">Каталог продукции</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Подбор программы</a>
+                <a class="navigation__link navigation__link--white" href="form.html">Подбор программы</a>
               </li>
             </ul>
           </nav>
@@ -60,18 +58,18 @@
           </div>
           <picture>
             <source media="(min-width: 1280px)"
-              srcset="img/content/cat-energy-desktop@1x.webp 1x, img/content/cat-energy-desktop@2x.webp 2x" width="552" height="499">
+              srcset="img/content/cat-energy-desktop@1x.webp 1x, img/content/cat-energy-desktop@2x.webp 2x" width="552" height="499" type="image/webp">
             <source media="(min-width: 768px)"
-              srcset="img/content/cat-energy-tablet@1x.webp 1x, img/content/cat-energy-tablet@2x.webp 2x" width="709" height="609">
+              srcset="img/content/cat-energy-tablet@1x.webp 1x, img/content/cat-energy-tablet@2x.webp 2x" width="709" height="609" type="image/webp">
             <source
               srcset="img/content/cat-energy@1x.webp 1x, img/content/cat-energy@2x.webp 2x" width="280" height="270" type="image/webp">
 
             <source media="(min-width: 1280px)"
-              srcset="img/content/cat-energy-desktop.png 1x, img/content/cat-energy-desktop@2x.png 2x" width="552" height="499">
+              srcset="img/content/cat-energy-desktop@1x.png 1x, img/content/cat-energy-desktop@2x.png 2x" width="552" height="499" type="image/png">
             <source media="(min-width: 768px)"
-              srcset="img/hero/cat-energy-tablet.png 1x, img/content/cat-energy-tablet@2x.png 2x" width="709" height="609">
-            <img class="hero__image" src="img/content/cat-energy.png"
-              srcset="img/content/cat-energy@2x.png 2x" alt="Изображение продукта Cat Energy" width="280" height="270">
+              srcset="img/content/cat-energy-tablet@1x.png 1x, img/content/cat-energy-tablet@2x.png 2x" width="709" height="609" type="image/png">
+            <img class="hero__image" src="img/content/cat-energy@1x.png"
+              srcset="img/content/cat-energy@2x.png 2x" alt="Изображение продукта Cat Energy" width="280" height="270" type="image/png">
           </picture>
           <a class="hero__link button" href="form.html">Подобрать программу</a>
         </div>
@@ -148,7 +146,7 @@
             <div class="example__slider slider">
               <picture>
                 <source media="(min-width: 768px)"
-                  srcset="img/content/fat-kitty-big@1x.webp 1x, img/content/fat-kitty-big@2x.webp 2x" width="560" height="512">
+                  srcset="img/content/fat-kitty-big@1x.webp 1x, img/content/fat-kitty-big@2x.webp 2x" width="560" height="512" type="image/webp">
                 <source
                   srcset="img/content/fat-kitty@1x.webp 1x, img/content/fat-kitty@2x.webp 2x" width="280" height="256" type="image/webp">
                 <source media="(min-width: 768px)"
@@ -158,7 +156,7 @@
               </picture>
               <picture>
                 <source media="(min-width: 768px)"
-                  srcset="img/content/slim-kitty-big@1x.webp 1x, img/content/slim-kitty-big@2x.webp 2x" width="560" height="512">
+                  srcset="img/content/slim-kitty-big@1x.webp 1x, img/content/slim-kitty-big@2x.webp 2x" width="560" height="512" type="image/webp">
                 <source
                   srcset="img/content/slim-kitty@1x.webp 1x, img/content/slim-kitty@2x.webp 2x" width="280" height="256" type="image/webp">
                 <source media="(min-width: 768px)"
@@ -170,7 +168,7 @@
                 <span class="visually-hidden">Кнопка изменения слайдера</span>
                 <input class="slider__control" type="range" min="0" max="100">
               </label>
-              <button class="slider__thumb" aria-label="Кнопка изменения слайдера"></button>
+              <button class="slider__thumb" aria-label="Кнопка изменения слайдера" type="button"></button>
             </div>
           </div>
         </div>
@@ -178,7 +176,7 @@
 
       <section class="address">
         <h2 class="visually-hidden">Наш адрес.</h2>
-        <div class="container">
+        <div class="container container--address">
           <div class="address__content">
             <p class="address__slogan">Приглашаем<br>к сотрудничеству дилеров!</p>
             <div class="address__location">
@@ -191,9 +189,9 @@
           <noscript>
             <picture>
               <source media="(min-width: 1280px)"
-                srcset="img/content/map-image-desktop@1x.webp 1x, img/content/map-image-desktop@2x.webp 2x" width="1440" height="400">
+                srcset="img/content/map-image-desktop@1x.webp 1x, img/content/map-image-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
               <source media="(min-width: 768px)"
-                srcset="img/content/map-image-tablet@1x.webp 1x, img/content/map-image-tablet@2x.webp 2x" width="1440" height="400">
+                srcset="img/content/map-image-tablet@1x.webp 1x, img/content/map-image-tablet@2x.webp 2x" width="1440" height="400" type="image/webp">
               <source
                 srcset="img/content/map-image@1x.webp 1x, img/content/map-image@2x.webp 2x" width="320" height="362" type="image/webp">
 

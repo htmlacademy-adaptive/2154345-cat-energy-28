@@ -7,9 +7,8 @@
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  row-gap: 18px;
+  row-gap: 12px;
 
-  // Декоративные линии на мобилках
   &:first-child::before {
     content: "";
     position: absolute;
@@ -20,6 +19,10 @@
     height: 1px;
 
     background-color: $color-whisper;
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
   }
 
   &::after {
@@ -32,31 +35,27 @@
     height: 1px;
 
     background-color: $color-whisper;
-  }
 
-  @media (min-width: $vp-768) {
-    display: flex;
-    flex-direction: column;
-    min-height: 503px;
-    padding: 0  36px 39px 36px;
-
-    row-gap: 0;
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
+    @media (min-width: $vp-768) {
       top: auto;
       bottom: 0;
       left: 0;
       z-index: -1;
 
       width: 100%;
-      height: calc(100% - 66px);
+      height: calc(100% - 81px);
 
       background-color: $color-white-smoke;
     }
+  }
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    flex-direction: column;
+    min-height: 511px;
+    padding: 0  36px 39px 36px;
+
+    row-gap: 0;
   }
 
   @media (min-width: $vp-1280) {
@@ -81,6 +80,11 @@
 
     grid-column: 1;
     grid-row: 1;
+
+    @media (min-width: $vp-768) {
+      max-width: 150px;
+      margin: 0 auto 20px auto;
+    }
   }
 
   .card__slogan {
@@ -92,10 +96,13 @@
     font-family: $font-lato;
 
     grid-row: 2;
-  }
 
-  .card__order-button {
-    width: 100%;
+    @media (min-width: $vp-768) {
+      margin: 0 auto 87px auto;
+
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   .card__plus {
@@ -111,6 +118,13 @@
     transform: translateX(-50%);
 
     mask-image: url("../img/sprite.svg#plus");
+
+    @media (min-width: $vp-768) {
+      top: 52px;
+
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &::after {
@@ -123,25 +137,6 @@
     padding: 156px 36px 39px 36px;
 
     border: 2px solid $color-white-smoke;
-
-    .card__plus {
-      top: 52px;
-
-      width: 60px;
-      height: 60px;
-    }
-
-    .card__title {
-      max-width: 150px;
-      margin: 0 auto 23px auto;
-    }
-
-    .card__slogan {
-      margin: 0 auto 87px auto;
-
-      font-size: 16px;
-      line-height: 18px;
-    }
   }
 
   @media (min-width: $vp-1280) {
@@ -152,14 +147,18 @@
 .card__image-link {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
   margin: 0;
 
   grid-row: 1 / 3;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 37px 0;
+    margin: 0 0 32px 0;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 49px 0;
   }
 }
 
@@ -200,7 +199,9 @@
 
 .card__order-button {
   padding: 10px;
+  width: 100%;
 
+  margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
   font-family: $font-oswald;
@@ -209,8 +210,7 @@
   grid-column: 1 / -1;
   grid-row: 3;
 
-  @media (min-width: $vp-768) {
-    grid-column: 1;
-    grid-row: 4;
+  @media (min-width: $vp-1280) {
+    width: 168px;
   }
 }

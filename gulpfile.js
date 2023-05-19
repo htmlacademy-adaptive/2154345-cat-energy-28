@@ -180,8 +180,8 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  optimizeImages,
-  svgOptimize,
+  copyImages,
+  svgCopy,
   gulp.parallel(
     styles,
     html,

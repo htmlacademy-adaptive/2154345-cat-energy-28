@@ -64,7 +64,6 @@
 
   &:hover,
   &:focus {
-    outline: none;
     opacity: 0.8;
   }
 
@@ -109,35 +108,51 @@
 }
 
 .page-footer__social-link {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
 
-  background-color: $color-dim-gray;
-
-  mask-position: 50%;
-  mask-repeat: no-repeat;
-  mask-size: 29px 22px;
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $color-dim-gray;
+    mask-position: 50%;
+    mask-repeat: no-repeat;
+    mask-size: 29px 22px;
+  }
 
   &--vk {
-    mask-image: url("../img/sprite.svg#icon-vk");
+    &::after {
+      mask-image: url("../img/sprite.svg#icon-vk");
+    }
   }
 
   &--yt {
-    mask-image: url("../img/sprite.svg#icon-yt");
+    &::after {
+      mask-image: url("../img/sprite.svg#icon-yt");
+    }
   }
 
   &--tg {
-    mask-image: url("../img/sprite.svg#icon-tg");
+    &::after {
+      mask-image: url("../img/sprite.svg#icon-tg");
+    }
   }
 
   &:hover,
   &:focus {
-    background-color: $color-apple;
+    &::after {
+      background-color: $color-apple;
+    }
   }
 
   &:active {
-    background-color: rgba($color-apple, 0.3);
+    &::after {
+      background-color: rgba($color-apple, 0.3);
+    }
   }
 }
 
@@ -151,8 +166,6 @@
 
   &:hover,
   &:focus {
-    outline: none;
-
     .page-footer__copyright-logo {
       background-color: $color-apple;
     }
@@ -169,7 +182,6 @@
   }
 
   @media (min-width: $vp-768) {
-    max-width: none;
     margin: 0;
     padding: 15px 0;
 
@@ -187,8 +199,8 @@
 }
 
 .page-footer__copyright-logo {
-  width: 27px;
-  height: 34px;
+  min-width: 27px;
+  min-height: 34px;
 
   background-color: $color-dim-gray;
 

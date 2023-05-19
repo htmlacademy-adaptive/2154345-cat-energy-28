@@ -3,7 +3,7 @@
 
   padding: 10px 0 33px 0;
 
-  @media (min-width: $vp-768) and (max-width: $vp-1280) {
+  @media (min-width: $vp-768) {
     padding: 44px 0 47px 0;
 
     &::after {
@@ -16,6 +16,10 @@
       height: 1px;
 
       background-color: $color-whisper;
+
+      @media (min-width: $vp-1280) {
+        display: none;
+      }
     }
   }
 
@@ -186,7 +190,15 @@
     max-width: 250px;
 
     &:nth-child(1) {
-      margin: 0 20px 0 0;
+      margin: 0 8px 0 0;
+    }
+  }
+}
+
+.benefits__item:nth-child(1) {
+  @media (min-width: $vp-768) {
+    &::after {
+      right: 15px;
     }
   }
 }
